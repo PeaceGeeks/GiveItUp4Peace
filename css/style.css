@@ -1468,7 +1468,7 @@ PARTICIPANT SECTION
 }
 
 #participant .section-container {
-  height: auto;
+  height:auto;
 
 }
 
@@ -1715,5 +1715,5 @@ footer mobile
 }
 
 #corporate .section-container {
-  height: 170vh;
+  height: 185vh;
 }
