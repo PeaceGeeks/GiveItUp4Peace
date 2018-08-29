@@ -34,17 +34,17 @@
     var logo = $('#giu4p-logo')
 
      if ((y > h + 15 ) && ($(window).outerWidth() > 768 ) ) {
-        header.addClass('opaque');  
-        logo.addClass('showlogo');     
+        header.addClass('opaque');
+        logo.addClass('showlogo');
      }
       else {
          if (y < h + 30) {
             header.removeClass('opaque');
-            logo.removeClass('showlogo'); 
+            logo.removeClass('showlogo');
          }
          else {
             header.addClass('opaque');
-            logo.addClass('showlogo'); 
+            logo.addClass('showlogo');
          }
       }
 
@@ -55,7 +55,7 @@
   /* Smooth Scrolling
   ------------------------------------------------------ */
   $('.smoothscroll').on('click', function (e) {
-  
+
   e.preventDefault();
 
   var target = this.hash,
@@ -67,31 +67,31 @@
       window.location.hash = target;
     });
 
-  });  
+  });
 
 
    /*-----------------------------------------------------*/
    /* Mobile Menu
-   ------------------------------------------------------ */  
+   ------------------------------------------------------ */
     var menu_icon = $("<span class='menu-icon'>Menu</span>");
-    var toggle_button = $("<a>", {                         
-                        id: "toggle-btn", 
+    var toggle_button = $("<a>", {
+                        id: "toggle-btn",
                         html : "",
                         title: "Menu",
-                        href : "#" } 
+                        href : "#" }
                         );
     var nav_wrap = $('nav#nav-wrap')
-    var nav = $("ul#nav");  
-   
-   /* if JS is enabled, remove the two a.mobile-btns 
+    var nav = $("ul#nav");
+
+   /* if JS is enabled, remove the two a.mobile-btns
     and dynamically prepend a.toggle-btn to #nav-wrap */
-    nav_wrap.find('a.mobile-btn').remove(); 
-    toggle_button.append(menu_icon); 
-    nav_wrap.prepend(toggle_button); 
+    nav_wrap.find('a.mobile-btn').remove();
+    toggle_button.append(menu_icon);
+    nav_wrap.prepend(toggle_button);
 
     toggle_button.on("click", function(e) {
     e.preventDefault();
-      nav.slideToggle("fast");     
+      nav.slideToggle("fast");
     });
 
     if (toggle_button.is(':visible')) nav.addClass('mobile');
@@ -100,20 +100,20 @@
       else nav.removeClass('mobile');
     });
 
-    $('ul#nav li a').on("click", function() {      
-    if (nav.hasClass('mobile')) nav.fadeOut('fast');      
+    $('ul#nav li a').on("click", function() {
+    if (nav.hasClass('mobile')) nav.fadeOut('fast');
     });
 
     /*-----------------------------------------------------*/
    /* countdown
-   ------------------------------------------------------ */ 
+   ------------------------------------------------------ */
 
     var daysElement = document.querySelector("#days");
      var hoursElement = document.querySelector("#hours");
      var minutesElement = document.querySelector("#minutes");
      var secondsElement = document.querySelector("#seconds");
      var containerElement = document.querySelector("#countdown");
-     var endDate = "2018/10/01"
+     var endDate = "2018/09/27"
 
      var myCountDown = new ysCountDown(endDate, function (remaining, finished) {
 
@@ -148,13 +148,13 @@ function changeWord() {
   for (var i = 0; i < cw.length; i++) {
     animateLetterOut(cw, i);
   }
-  
+
   for (var i = 0; i < nw.length; i++) {
     nw[i].className = 'letter behind';
     nw[0].parentElement.style.opacity = 1;
     animateLetterIn(nw, i);
   }
-  
+
   currentWord = (currentWord == wordArray.length-1) ? 0 : currentWord+1;
 }
 
@@ -181,7 +181,7 @@ function splitLetters(word) {
     word.appendChild(letter);
     letters.push(letter);
   }
-  
+
   wordArray.push(letters);
 }
 
@@ -197,13 +197,13 @@ $(document).ready(function(){
     type: 'get',
     cache: false,
     success: function(data) {
-      $(data.graphql.hashtag.edge_hashtag_to_media.edges).each(function(index, value) {   
+      $(data.graphql.hashtag.edge_hashtag_to_media.edges).each(function(index, value) {
         $('#instafeed ul').append('<li class="list-inline-item insta-foto"><img class="img-fluid" src="'+value.node.thumbnail_resources[4].src+'"><a href="https://www.instagram.com/p/'+value.node.shortcode+'/" class="insta-description" target="_blank"><p> '+value.node.edge_media_to_caption.edges[0].node.text+'</p><small><i class="fas fa-heart"></i>  '+value.node.edge_liked_by.count+'&nbsp; <i class="fas fa-comment-alt"></i>  '+value.node.edge_media_to_comment.count+'</small></a></li>');
             return index<12-1;
-      });    
+      });
     }
   });
-}); 
+});
 
 
 /* -- testimonials --*/
@@ -248,7 +248,7 @@ $(function() {
 
     $(this).addClass('current_slide').siblings().removeClass('current_slide');
   });
-  
+
     function GetIEVersion() {
     var sAgent = window.navigator.userAgent;
     var Idx = sAgent.indexOf("MSIE");
@@ -280,15 +280,15 @@ $(function() {
   $(window).on('resize', function() {
     initSlider();
   });
-  
+
 });
 
 
-/** 
+/**
  * ===================================================================
  * javascript plugins
  *
- * ------------------------------------------------------------------- 
+ * -------------------------------------------------------------------
  */
 
 /*! Lity - v1.6.6 - 2016-04-22
@@ -303,5 +303,5 @@ $(function() {
    /* TYPEFORM
    ------------------------------------------------------ */
 
-     (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() 
+     (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })()
      (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })()
