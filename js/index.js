@@ -220,7 +220,7 @@ $(function() {
     var sliderWidth = cdSlider.outerWidth(),
       cardWidth = card.eq(0).outerWidth(),
       marginLeftFirstCard = sliderWidth/2 - cardWidth/2, // Center first card
-      marginLeft = marginLeftFirstCard - (cardWidth * 1/7);
+      marginLeft = marginLeftFirstCard - (cardWidth * 1/7) ;
 
     card.css('margin-left', marginLeft + 'px');
     card.eq(0).css('margin-left', marginLeftFirstCard + 'px');
