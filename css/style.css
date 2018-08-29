@@ -1474,7 +1474,6 @@ PARTICIPANT SECTION
 
 #participant .section-container {
   height:auto;
-
 }
 
 #instafeed ul { margin: 0; padding: 0; list-style: none;}
@@ -1533,7 +1532,7 @@ PARTICIPANT SECTION
   width: 100%;
   text-align: center;
   background-color: #ffc12f;
-  overflow: hidden;
+  overflow-x: scroll;
 }
 
 .testimonials ul {
@@ -1550,7 +1549,7 @@ PARTICIPANT SECTION
   float: left;
   list-style: none;
   cursor: pointer;
-  max-width: 680px;
+  max-width: 780px;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 0 10px 2px rgba(0,0,0,.1);
@@ -1670,9 +1669,9 @@ PARTICIPANT SECTION
 /* -----------------footer --------------------------------*/
 
 #footer-bg {
-  display: inline-block;
+  position: absolute;
   width: 100%;
-  height:80%;
+  height: 40em;
   background-color: #278186;
   background-image: url("../photos/footer.png");
   background-position: bottom;
@@ -1685,6 +1684,7 @@ PARTICIPANT SECTION
   justify-content: space-around;
   width: 100%;
   max-height: 50%;
+  position: absolute;
 }
 
 #footer-content{
@@ -1692,11 +1692,8 @@ PARTICIPANT SECTION
   font-size: 1.0em;
   color:white;
   line-height: 1.5;
+  height: auto;
   margin-right: 10%;
-}
-
-#footer-para {
-
 }
 
 h1#footer-header {
@@ -1706,6 +1703,10 @@ h1#footer-header {
   color:white;
 }
 
+p#copyright {
+  padding-bottom: 10%;
+}
+
 /* -------
 footer mobile
 --------*/
@@ -1713,9 +1714,9 @@ footer mobile
 @media screen and (max-width: 760px) {
 
   #footer-bg {
-    height: 70%;
     background-image: url("../photos/footer-mobile.png");
     background-size: contain;
+    height: 40em;
   }
 
   #footer-container {
@@ -1727,6 +1728,4 @@ footer mobile
     max-width: 100%;
     padding: 4%;
   }
-
-
 }

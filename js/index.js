@@ -246,7 +246,10 @@ $(function() {
 
     move(translate);
 
+
     $(this).addClass('current_slide').siblings().removeClass('current_slide');
+
+
   });
 
     function GetIEVersion() {
