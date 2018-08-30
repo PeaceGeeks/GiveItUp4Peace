@@ -34,6 +34,7 @@ body {
   html {
     font-size: 9.375px;
   }
+
 }
 @media only screen and (max-width: 760px) {
   html {
@@ -1283,7 +1284,7 @@ ABOUT SECTION
 }
 
 #about .section-container {
-  height: 95vh;
+  height: 600px;
 }
 
 #about .abt-visual-elements {
@@ -1371,7 +1372,7 @@ CORPORATE SECTION
 }
 
 #corporate  .section-container {
-  height: 1100px;
+  height: 1050px;
 }
 
 #corporate .abt-visual-elements {
@@ -1423,6 +1424,13 @@ CORPORATE SECTION
   font-weight: 700;
   color: #F09416;
 }
+
+/* corporate tablet --*/
+/* @media (max-width:1100px) and (min-width:760px) {
+    #corporate .section-container {
+      background-color: red;
+    }
+} */
 
 /*--corporate mobile--*/
 @media only screen and (max-width:760px) {
