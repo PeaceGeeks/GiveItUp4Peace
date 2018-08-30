@@ -772,7 +772,7 @@ LANDING SECTION
   position: relative;
   top: 65px;
   left:0;
-  background: url("../photos/landing.jpg") no-repeat center;
+  background: url("../photos/landing.jpg") no-repeat top;
   background-size: cover;
 }
 
@@ -1522,6 +1522,19 @@ PARTICIPANT SECTION
     padding: 0;
     float: left;
     position: relative;
+  }
+
+  a#gitbook {
+    font-size: 0.9em;
+  }
+
+  span.card-title {
+    font-size: 1.4em;
+    padding: 15px;
+  }
+
+  p.quote {
+    font-size: 1em;
   }
 }
 
