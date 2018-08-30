@@ -238,19 +238,19 @@ $(function() {
 
   }
 
-  card.on('click', function() {
-    var cardWidth = card.eq(0).outerWidth(),
-      sliderWidth = cdSlider.outerWidth(),
-      marginLeft = ( sliderWidth/2 - cardWidth/2 ) - (cardWidth * 1/7),
-      translate = ( $(this).index() * ( cardWidth + marginLeft ) ) + 'px';
-
-    move(translate);
-
-
-    $(this).addClass('current_slide').siblings().removeClass('current_slide');
-
-
-  });
+  // card.on('click', function() {
+  //   var cardWidth = card.eq(0).outerWidth(),
+  //     sliderWidth = cdSlider.outerWidth(),
+  //     marginLeft = ( sliderWidth/2 - cardWidth/2 ) - (cardWidth * 1/7),
+  //     translate = ( $(this).index() * ( cardWidth + marginLeft ) ) + 'px';
+  //
+  //   move(translate);
+  //
+  //
+  //   $(this).addClass('current_slide').siblings().removeClass('current_slide');
+  //
+  //
+  // });
 
     function GetIEVersion() {
     var sAgent = window.navigator.userAgent;

@@ -1548,7 +1548,7 @@ PARTICIPANT SECTION
 .testimonials li {
   float: left;
   list-style: none;
-  cursor: pointer;
+  cursor:default;
   max-width: 780px;
   background: #fff;
   border-radius: 10px;
