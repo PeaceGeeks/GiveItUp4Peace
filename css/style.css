@@ -1194,6 +1194,7 @@ ROTATING TEXT SECTION
   font-weight:800;
   color: #ffffff;
   margin-bottom: 0.8em;
+  text-align: center;
 }
 
 #rotating .word {
@@ -1223,6 +1224,120 @@ ROTATING TEXT SECTION
 #rotating .letter.in {
   transform: rotateX(0deg);
   transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+
+/* - - - - - - - - - - - - - - - - - - - - -
+PROJECTS SECTION
+- - - - - - - - - - - - - - - - - - - - - - -  */
+
+#projects .row {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding:0;
+  text-align: center;
+}
+
+#projects .column-flex {
+  display: inline-block;
+  margin-left: 1%;
+  margin-right: 1%;
+  width: 45%;
+  min-width: 150px;
+  vertical-align: top;
+  margin-top: 2em;
+}
+
+#projects .left {
+  margin-bottom: 2em;
+}
+
+#projects .right {
+  margin-bottom: 2em;
+}
+
+#projects h2 {
+  text-align: left;
+  margin-bottom: 0em;
+  margin-top: 0.2em;
+  line-height: 1.3em;
+}
+
+#projects h2 span {
+  color: #ffc12f;
+  font-size: 0.9em;
+  line-height: 1.3em;
+}
+
+#projects p, h3, h4, h5, ul {
+  text-align: left;
+}
+
+#projects h3 {
+  padding-top: 1em;
+}
+
+.fluid-video-wrapper {
+  margin-bottom: 3rem;
+}
+
+.orange-box {
+  background-color: #FFF7EB;
+}
+
+.teal-box {
+  background-color: #e6f5f6;
+}
+
+.teal-box a {
+  color: #278186;
+}
+
+.teal-box a:hover,
+a:focus {
+  color: #ffc12f;
+  text-decoration: none;
+}
+
+.darker-orange-box {
+  background-color: #fadebc;
+}
+
+.darker-teal-box {
+  background-color: #c9eaec;
+}
+
+#projects .funds-container {
+  padding-left: 1em;
+  padding-right: 1em;
+  border-radius: 1em;
+}
+
+#projects span {
+  font-size: 1.1em;
+  font-weight: bolder;
+}
+
+/*--- projects mobile --*/
+@media only screen and (max-width:760px) {
+  #projects .column-flex {
+    margin-left: 2%;
+    margin-right: 2%;
+    width: 90%;
+  }
+
+  #projects h2 {
+    text-align: center;
+  }
+
+  #projects .left {
+    margin-bottom: 0em; 
+  }
+
+  #projects .right {
+    margin-top: 0em;
+  }
 }
 
 
@@ -1796,6 +1911,8 @@ Image Modal
   font-family: Poppins;
   color: teal;
   font-size: 1em;
+  background-color :#E2F3F3;
+  font-weight:bolder;
 }
 
 #fund-btn:hover {
