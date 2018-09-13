@@ -446,7 +446,7 @@ header.opaque {
   color: transparent;
   width: 110px;
   height: 65px;
-  background: url("../photos/pg-logo.png") no-repeat center;
+  background: url("../photos/peacegeeks-logo-white.png") no-repeat center;
   background-size: 110px 57px;
 }
 
@@ -1264,6 +1264,16 @@ PROJECTS SECTION
   line-height: 1.3em;
 }
 
+#projects .subtitle {
+  text-align: center;
+  margin-top: 1em; 
+  margin-bottom: 1em; 
+  font-size: 1.2em; 
+  padding-left: 10%;
+  padding-right: 10%;
+  line-height: 1.4em;
+}
+
 #projects h2 span {
   color: #ffc12f;
   font-size: 0.9em;
@@ -1337,6 +1347,16 @@ a:focus {
 
   #projects .right {
     margin-top: 0em;
+  }
+
+  #projects .subtitle {
+    text-align: center;
+    margin-top: 1em; 
+    margin-bottom: 1em; 
+    font-size: 1em; 
+    padding-left: 0%;
+    padding-right: 0%;
+    line-height: 1.3em;
   }
 }
 
@@ -1724,12 +1744,14 @@ PARTICIPANT SECTION
   box-shadow: 0 0 10px 2px rgba(0,0,0,.1);
   transform: scale(0.9);
   transition: transform .6s;
+  text-align: center;
 }
 .testimonials li img {
   width: 13rem;
   border-radius: 50%;
   margin-top: -5rem;
   box-shadow: 0 3px 10px 0 rgba(0,0,0,.2);
+  text-align: center;
 }
 
 #poster-container {
@@ -1795,6 +1817,7 @@ PARTICIPANT SECTION
   font-weight: 700;
   color: #000000;
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 .card-title {
@@ -1805,6 +1828,7 @@ PARTICIPANT SECTION
   font-weight: 700;
   color: #000000;
   margin-top: 1rem;
+  text-align: center;
 }
 
 .info {
@@ -1816,6 +1840,7 @@ PARTICIPANT SECTION
   font-family: "Poppins", sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
+  text-align: center;
 }
 .testimonials li.current_slide {
   transform: scale(1);
