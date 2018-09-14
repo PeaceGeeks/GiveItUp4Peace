@@ -1,3 +1,37 @@
+  
+/* Client Logo Slider */
+
+$(document).ready(function(){
+    $('.customer-logos').slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 1000,
+      arrows: false,
+      dots: false,
+        pauseOnHover: false,
+        responsive: [{
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3
+        }
+      }, {
+        breakpoint: 520,
+        settings: {
+          slidesToShow: 2
+        }
+      }]
+    });
+  });
+
+/* FitVids
+  ------------------------------------------------------ */ 
+  $(document).ready(function(){
+    // Target your .container, .wrapper, .post, etc.
+    $(".fluid-video-wrapper").fitVids();
+  });
+
+
   // Fundraising modal //
   // Get the modal
   var modal = document.getElementById('myModal');
@@ -48,15 +82,6 @@
           .setClassToggle("#high4", "active")
           // .addIndicators()
           .addTo(controller);
-
-
-  /* FitVids
-  ------------------------------------------------------ */ 
-  $(document).ready(function(){
-    // Target your .container, .wrapper, .post, etc.
-    $(".fluid-video-wrapper").fitVids();
-  });
-
 
    /*----------------------------------------------------*/
   /* Adjust Primary Navigation Background Opacity
