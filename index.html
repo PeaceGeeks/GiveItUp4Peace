@@ -59,7 +59,8 @@
 	<script>
 	function showMailingPopUp() {
 	    require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us2.list-manage.com","uuid":"951e6313af8a044ad05fdc097","lid":"4169ae5099"}) })
-	    document.cookie = "MCEvilPopupClosed=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+	    document.cookie = "MCPopupClosed=;path=/;expires=Thu, 01 Jan 1970 00:00:00 UTC";
+	    document.cookie = 'MCPopupSubscribed=;path=/;expires=Thu, 01 Jan 1970 00:00:00 UTC;';
 	};
 
 	document.getElementById("open-popup").onclick = function() {showMailingPopUp()};
@@ -85,7 +86,7 @@
 		        <li id="high2" class="navleft"><a class="smoothscroll" href="#about">Why Participate</a></li>
 	            <li id="high3" class="navleft"><a class="smoothscroll" href="#corporate">Corporate Teams</a></li>
 	            <li id="high4" class="navleft"><a class="smoothscroll" href="#participant">See Who's Involved</a></li>
-	            <li id="CTA"><a id="open-popup">Sign Up</a></li>
+	            <li id="CTA"><a id="open-popup" onclick ="showMailingPopUp(); return false;">Sign Up</a></li>
 	        	<li id="CTA"><a href="https://peacegeeks.org/donate" id="donate-link">Donate</a></li>
 	         </ul> <!-- end #nav -->
 
@@ -145,8 +146,8 @@
 
                            <center>
 
-                           		<button class="btn-alt" id="open-popup" target="_blank">&nbsp; &nbsp;SIGN UP TO GIVE IT UP!&nbsp; &nbsp;</button>
-                              <a class="btn smoothscroll" href="#participant">&nbsp; &nbsp;SEE WHO'S GIVING IT UP &nbsp; &nbsp;</a>
+                           		<button class="btn-alt" id="open-popup" target="_blank" onclick ="showMailingPopUp(); return false;">&nbsp; &nbsp;SIGN UP TO GIVE IT UP!&nbsp; &nbsp;</button>
+                              <a id="btn" class="smoothscroll" href="#participant">&nbsp; &nbsp;SEE WHO'S GIVING IT UP &nbsp; &nbsp;</a>
                            </center>
 
 	               </div>
