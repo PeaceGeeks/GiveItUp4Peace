@@ -1022,6 +1022,8 @@ li#cd span {
   -moz-border-radius: 15px;
   -webkit-border-radius: 15px;
   border-radius: 15px;
+  text-decoration: none;
+  outline: none;
 }
 
 .btn-alt:hover,
@@ -1029,6 +1031,7 @@ li#cd span {
   background-color:#80cdd3;
   text-decoration: none;
   cursor: pointer;
+  outline: none;
 }
 
 /* - - - - - - - - - - - - landing visual asset styling   - - - - - - - - - - - - - - - */
