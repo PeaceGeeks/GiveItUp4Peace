@@ -72,7 +72,7 @@
 		        <li id="high2" class="navleft"><a class="smoothscroll" href="#about">Why Participate</a></li>
 	            <li id="high3" class="navleft"><a class="smoothscroll" href="#corporate">Corporate Teams</a></li>
 	            <li id="high4" class="navleft"><a class="smoothscroll" href="#participant">See Who's Involved</a></li>
-	            <li id="CTA"><a id="open-popup" onclick="showMailingPopUp(); return false;">Sign Up</a></li>
+	            <li id="CTA"><button id="open-popup" class="signup-top" onclick="showMailingPopUp(); return false;">Sign Up</button></li>
 	        	<li id="CTA"><a href="https://peacegeeks.org/donate" id="donate-link">Donate</a></li>
 	         </ul> <!-- end #nav -->
 
@@ -471,15 +471,15 @@
 
     <!--mailchimp
     -->
-    <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
+    <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
 
 	<script>
 	var chimpPopupLoader = document.createElement("script");
-    chimpPopupLoader.src = '//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js';
+    chimpPopupLoader.src = '//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js';
     chimpPopupLoader.setAttribute('data-dojo-config', 'usePlainJson: true, isDebug: false');
 
     function showMailingPopUp() {
-        require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us2.list-manage.com","uuid":"951e6313af8a044ad05fdc097","lid":"4169ae5099","uniqueMethods":true}) })
+        require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us2.list-manage.com","uuid":"951e6313af8a044ad05fdc097","lid":"4169ae5099"}) })
         document.cookie = 'MCPopupClosed=;path=/;expires=Thu, 01 Jan 1970 00:00:00 UTC;';
         document.cookie = 'MCPopupSubscribed=;path=/;expires=Thu, 01 Jan 1970 00:00:00 UTC;';
     };
