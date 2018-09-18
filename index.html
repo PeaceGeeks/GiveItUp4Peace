@@ -52,6 +52,15 @@
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~` `-->
     <script type="text/javascript">(function(o){var b="https://api.autopilothq.com/anywhere/",t="6512a449a37e4e9c8f8beac5f5f8ce8f805bf0cf9f834e81a0012b370027d3ff",a=window.AutopilotAnywhere={_runQueue:[],run:function(){this._runQueue.push(arguments);}},c=encodeURIComponent,s="SCRIPT",d=document,l=d.getElementsByTagName(s)[0],p="t="+c(d.title||"")+"&u="+c(d.location.href||"")+"&r="+c(d.referrer||""),j="text/javascript",z,y;if(!window.Autopilot) window.Autopilot=a;if(o.app) p="devmode=true&"+p;z=function(src,asy){var e=d.createElement(s);e.src=src;e.type=j;e.async=asy;l.parentNode.insertBefore(e,l);};y=function(){z(b+t+'?'+p,true);};if(window.attachEvent){window.attachEvent("onload",y);}else{window.addEventListener("load",y,false);}})({});</script>
 
+    <!--mailchimp
+    -->
+    <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">function showMailingPopUp() {
+require([“mojo/signup-forms/Loader”], function(L) { L.start({“baseUrl”:”…”,”uuid”:”….",”lid”:”…."}) })
+document.cookie = “MCPopupClosed=; expires=Thu, 01 Jan 1970 00:00:00 UTC”;
+};
+document.getElementById(“open-popup”).onclick = function() {showMailingPopUp()};
+</script>
+
 	<!-- FAVICONS
 	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~` `-->
 	<link rel="shortcut icon" href="favicon.ico?" type="image/x-icon">
@@ -72,7 +81,7 @@
 		        <li id="high2" class="navleft"><a class="smoothscroll" href="#about">Why Participate</a></li>
 	            <li id="high3" class="navleft"><a class="smoothscroll" href="#corporate">Corporate Teams</a></li>
 	            <li id="high4" class="navleft"><a class="smoothscroll" href="#participant">See Who's Involved</a></li>
-	            <li id="CTA"><a href="https://timecounts.org/giveitup4peace/join" target="_blank">Sign Up</a></li>
+	            <li id="CTA"><a id="open-popup">Sign Up</a></li>
 	        	<li id="CTA"><a href="https://peacegeeks.org/donate" id="donate-link">Donate</a></li>
 	         </ul> <!-- end #nav -->
 
@@ -132,8 +141,8 @@
 
                            <center>
 
-                           		<a class="typeform-share button" href="https://timecounts.org/giveitup4peace/join" data-mode="popup" id="btn-alt" target="_blank">&nbsp; &nbsp;SIGN UP ON MY OWN&nbsp; &nbsp;</a>
-                              <a class="typeform-share button" href="https://timecounts.org/giveitup4peace/opportunities" data-mode="popup" id="btn" target="_blank">&nbsp; &nbsp;FIND OR START A TEAM &nbsp; &nbsp;</a>
+                           		<button class="btn-alt" id="open-popup" target="_blank">&nbsp; &nbsp;SIGN UP TO GIVE IT UP!&nbsp; &nbsp;</button>
+                              <a class="btn smoothscroll" href="#participant">&nbsp; &nbsp;SEE WHO'S GIVING IT UP &nbsp; &nbsp;</a>
                            </center>
 
 	               </div>

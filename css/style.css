@@ -978,7 +978,7 @@ li#cd span {
 
 /*-- typeform buttons--*/
 
-a#btn {
+a.btn {
   display: inline-block;
   background-color: #ffc12f;
   border: none;
@@ -997,13 +997,13 @@ a#btn {
   border-radius: 15px;
 }
 
-a#btn:hover,
-a#btn:focus {
+a.btn:hover,
+a.btn:focus {
   background-color:#f09416;
   text-decoration: none;
 }
 
-#btn-alt {
+.btn-alt {
   display: inline-block;
   background-color: #9dd8dd;
   border: none;
@@ -1022,8 +1022,8 @@ a#btn:focus {
   border-radius: 15px;
 }
 
-a#btn-alt:hover,
-a#btn-alt:focus {
+.btn-alt:hover,
+.btn-alt:focus {
   background-color:#80cdd3;
   text-decoration: none;
 }
