@@ -258,8 +258,10 @@ $(document).ready(function(){
     cache: false,
     success: function(data) {
       $(data.graphql.hashtag.edge_hashtag_to_media.edges).each(function(index, value) {
-        $('#instafeed ul').append('<li class="list-inline-item insta-foto"><img class="img-fluid" src="'+value.node.thumbnail_resources[4].src+'"><a href="https://www.instagram.com/p/'+value.node.shortcode+'/" class="insta-description" target="_blank"><p> '+value.node.edge_media_to_caption.edges[0].node.text+'</p><small><i class="fas fa-heart"></i>  '+value.node.edge_liked_by.count+'&nbsp; <i class="fas fa-comment-alt"></i>  '+value.node.edge_media_to_comment.count+'</small></a></li>');
-            return index<12-1;
+	// Filter out naughty lady using similar hashtag!
+	if (value.node.owner.id != '2272528858') {
+          $('#instafeed ul').append('<li class="list-inline-item insta-foto"><img class="img-fluid" src="'+value.node.thumbnail_resources[4].src+'"><a href="https://www.instagram.com/p/'+value.node.shortcode+'/" class="insta-description" target="_blank"><p> '+value.node.edge_media_to_caption.edges[0].node.text+'</p><small><i class="fas fa-heart"></i>  '+value.node.edge_liked_by.count+'&nbsp; <i class="fas fa-comment-alt"></i>  '+value.node.edge_media_to_comment.count+'</small></a></li>');
+        }
       });
     }
   });
