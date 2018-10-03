@@ -48,9 +48,9 @@
     <script src="./js/yscountdown.min.js"></script>
     <script src="js/yscountdown.js"></script>
 
-    <!-- autopilot
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~` `-->
-    <script type="text/javascript">(function(o){var b="https://api.autopilothq.com/anywhere/",t="6512a449a37e4e9c8f8beac5f5f8ce8f805bf0cf9f834e81a0012b370027d3ff",a=window.AutopilotAnywhere={_runQueue:[],run:function(){this._runQueue.push(arguments);}},c=encodeURIComponent,s="SCRIPT",d=document,l=d.getElementsByTagName(s)[0],p="t="+c(d.title||"")+"&u="+c(d.location.href||"")+"&r="+c(d.referrer||""),j="text/javascript",z,y;if(!window.Autopilot) window.Autopilot=a;if(o.app) p="devmode=true&"+p;z=function(src,asy){var e=d.createElement(s);e.src=src;e.type=j;e.async=asy;l.parentNode.insertBefore(e,l);};y=function(){z(b+t+'?'+p,true);};if(window.attachEvent){window.attachEvent("onload",y);}else{window.addEventListener("load",y,false);}})({});</script>
+    <script src="js/jquery.html5data.min.js"></script>
+    <script src="js/jquery.chimpify.js"></script>
+    <script src="js/scripts.js"></script>
 
 	<!-- FAVICONS
 	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~` `-->
@@ -68,10 +68,10 @@
       		<div id="giu4p-logo"><a class="smoothscroll" href="#top">#GiveItUp4Peace</a></div>
 
          	<ul id="nav" class="nav">
-	            <li id="high1" class="navleft"><a class="smoothscroll" href="#howitworks">How It Works</a></li>
-		        <li id="high2" class="navleft"><a class="smoothscroll" href="#about">Why Participate</a></li>
-	            <li id="high3" class="navleft"><a class="smoothscroll" href="#corporate">Corporate Teams</a></li>
-	            <li id="high4" class="navleft"><a class="smoothscroll" href="#participant">See Who's Involved</a></li>
+	            <li id="high1" class="navleft"><a class="smoothscroll" href="#teams">See Who's Involved</a></li>
+		        <li id="high2" class="navleft"><a class="smoothscroll" href="#projects">Your Impact</a></li>
+	            <li id="high3" class="navleft"><a class="smoothscroll" href="#howitworks">How It Works</a></li>
+	            <li id="high4" class="navleft"><a class="smoothscroll" href="#participant">Community Hub</a></li>
 	            <li id="CTA"><a id="open-popup">Sign Up</a></li>
 	        	<li id="CTA"><a href="https://peacegeeks.org/donate" id="donate-link">Donate</a></li>
 	         </ul> <!-- end #nav -->
@@ -103,49 +103,67 @@
 		<div class="section-container">
 		<!-- top-left image with vid -->
 		<div class="landing-vid-container">
-			<div class="video-player">
-				<a class="video-link" href="https://youtu.be/rmun-zdQO2A" data-lity>
-	            <span class="video-icon"></span>
-	            </a>
-	        </div>
+
+      <!-- MOST ACTIVE -->
+	     <div id="leaderboard">
+       <!-- data-chimp-type="campaign-groups" displays the giving groups associated with a campaign -->
+                   <!-- Specify the ID of the campaign in the "data-chimp-campaign-id" attribute -->
+                   <!-- You can also specify the number of giving group you want to display using the "data-chimp-num-groups" attribute -->
+                   <!-- You can also show giving groups that have only been active within X number of days using the "data-chimp-num-days" attribute -->
+                 <div class="chimpify-container">
+                   <!-- TOTAL AMOUNT RAISED -->
+
+                   <div id="total-funds">
+                        <span id="total-funds" class="campaign-total"></span>&nbsp;
+                        <p id="raised"><span>raised so far</span><br><br> Help us reach our goal of <span class="smaller">$45,000</span> to support PeaceGeeks' projects helping refugees, newcomers and communities at risk. <br><a class="video-link" href="https://youtu.be/rmun-zdQO2A" data-lity>Watch video &rarr;</a></p>
+                 </div>
+
+                 <div id="count-container">
+                  <a href="https://peacegeeks.org/donate" target="_blank">
+                        <div id="countdown">
+                            <li id="top"><span id="days">0</span> days</li>
+                            <li id="cd"><span id="hours">0</span>H</li>
+                            <li id="cd"><span id="minutes">0</span>M</li>
+                            <li id="cd"><span id="seconds">0</span>S</li>
+                        </div>
+                        <h3>left to #GiveItUp4Peace!</h3>
+                      </a>
+                </div>
+
+
         </div>
+
+      </div>
 
         <!--top-right text -->
         	</div>
         	<div id="container">
-                   <div id="text-container">
-	                   	<div id="logo-big">
-	                  		<img src="./photos/LOGO.svg" alt="Give It Up 4 Peace">
-	                   </div>
+              <div id="text-container">
+                    <div id="logo-big">
+                      <img src="./photos/LOGO.svg" alt="Give It Up 4 Peace">
+                  </div>
 
-	                   <div id="logo-white">
-	                  		<img src="./photos/LOGO-white.svg" alt="Give It Up 4 Peace">
-	                   </div>
+                  <div id="logo-white">
+                     <img src="./photos/LOGO-white.svg" alt="Give It Up 4 Peace">
+                  </div>
+
 
 	                   <div id="p-container">
-
-	                      <h4>This October, </h4>
+                        <h4>This October, </h4>
 	                      <h2>Give up something for the month &#38; raise money to help communities at risk use tech for peace. </h2>
-	                      <p>Every day, conflict and crisis force people to give up their life as they know it. In a time of increasing polarization in digital spaces, the world needs more peacebuilders than ever before. Join PeaceGeeks in helping make a difference for communities facing displacement, conflict and crisis worldwide.
-	                     </p><br>
+	                      <p>At <a href="https://peacegeeks.org" target="_blank"><span>PeaceGeeks</span></a>, we work with refugees, immigrants and communities at risk to build the digital tools they need for peace and humanitarian action. Join us to <span>#GiveItUp4Peace</span>! It's not too late to sign up, or donate now to support our projects helping communities that are forced to give up everything due to conflict and displacement.
+	                     </p>
+                       <div id="total-funds" class="hide-on-desktop">
+                          <span id="total-funds" class="campaign-total2"></span>&nbsp;
+                          <p id="raised"><span>raised so far</span>
+                        </div>
 	                     	<!-- ~~~~~~~~~~~~ TYPEFORM BUTONS ~~~~~~~~~~~~~-->
 
                            <center>
-                              <button class="btn-alt" onclick="document.getElementById('open-popup').click()">&nbsp; &nbsp;SIGN UP AS A PARTICIPANT&nbsp; &nbsp;</button>
+                              <a id="btn" " href="http://peacegeeks.org/donate" target="_blank">&nbsp; &nbsp;DONATE TODAY &nbsp; &nbsp;</a>
+                              <button class="btn-alt" onclick="document.getElementById('open-popup').click()">&nbsp; &nbsp;SIGN UP TO PARTICIPATE&nbsp; &nbsp;</button>
                            </center>
-
-	               </div>
-               	<div id="count-container">
-           			 	<a href="https://www.eventbrite.ca/e/giveitup4peace-launch-party-tickets-49154551587?utm-medium=discovery&utm-campaign=social&utm-content=attendeeshare&aff=escb&utm-source=cp&utm-term=listing">
-		                    <div id="countdown">
-		                        <li id="top"><span id="days">0</span> days</li>
-		                        <li id="cd"><span id="hours">0</span>H</li>
-		                        <li id="cd"><span id="minutes">0</span>M</li>
-		                        <li id="cd"><span id="seconds">0</span>S</li>
-		                    </div>
-	                  		<h3>'til the end of #GiveItUp4Peace! </h3>
-	                  	</a>
-                </div>
+                         </div>
 
            </div>
          </div>
@@ -187,6 +205,72 @@
     </div>
 	</section>
 
+  <!-- ~~~~~ GALLERY ~~~~ -->
+  <section id="gallery">
+    <div class="container">
+      <div class="pushsection">
+    <div class="gallery">
+      <img src="./photos/Renee.jpg" alt="" width="100%" height="auto" class="gallery-img" />   
+      <img src="./photos/Flipboard Colin.jpg" alt="" width="100%" height="auto" class="gallery-img" />
+      <img src="./photos/Krystal.jpg" alt="" width="100%" height="auto" class="gallery-img" />
+      <img src="./photos/Mack.jpg" alt="" width="100%" height="auto" class="gallery-img" />
+      <img src="./photos/Pledge photos.jpg" alt="" width="100%" height="auto" class="gallery-img" />
+      <img src="./photos/Ahmad PeaceGeeks.jpg" alt="" width="100%" height="auto" class="gallery-img" />
+      <img src="./photos/Joe.jpg" alt="" width="100%" height="auto" class="gallery-img" />
+      <img src="./photos/Tasneem PeaceGeeks.jpg" alt="" width="100%" height="auto" class="gallery-img" />
+    </div> 
+  </div>
+
+  <div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ TEAMS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+  <section id="teams">
+     <div class="section-container">
+        <div class="pushsection">
+         	  <h1> Participating Teams </h1>
+              <div class="row">
+                <div class="campaigns"></div>
+              </div>
+        </div>
+      </div>
+   </div>
+ </section>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ INDIVIDUALS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+   <section id="individuals">
+      <div class="section-container">
+        <div class="pushsection">
+          	  <h1> Meet some of the individuals fundraising </h1>
+
+              <div class="row">
+                <span class="chimpify" data-chimp-type="campaign-groups" data-chimp-campaign-id="1272" data-chimp-num-groups="3" data-chimp-num-days="365"></span>
+                <span class="chimpify" data-chimp-type="campaign-groups" data-chimp-campaign-id="1209" data-chimp-num-groups="5" data-chimp-num-days="365"></span>
+                <span class="chimpify" data-chimp-type="campaign-groups" data-chimp-campaign-id="1236" data-chimp-num-groups="3" data-chimp-num-days="365"></span>
+                <span class="chimpify" data-chimp-type="campaign-groups" data-chimp-campaign-id="1237" data-chimp-num-groups="3" data-chimp-num-days="365"></span>
+                <span class="chimpify" data-chimp-type="campaign-groups" data-chimp-campaign-id="1238" data-chimp-num-groups="3" data-chimp-num-days="365"></span>
+                <span class="chimpify" data-chimp-type="campaign-groups" data-chimp-campaign-id="1245" data-chimp-num-groups="6" data-chimp-num-days="365"></span>
+                <span class="chimpify" data-chimp-type="campaign-groups" data-chimp-campaign-id="1251" data-chimp-num-groups="3" data-chimp-num-days="365"></span>
+                <span class="chimpify" data-chimp-type="campaign-groups" data-chimp-campaign-id="1259" data-chimp-num-groups="3" data-chimp-num-days="365"></span>
+                <span class="chimpify" data-chimp-type="campaign-groups" data-chimp-campaign-id="1260" data-chimp-num-groups="3" data-chimp-num-days="365"></span>
+                <span class="chimpify" data-chimp-type="campaign-groups" data-chimp-campaign-id="1261" data-chimp-num-groups="3" data-chimp-num-days="365"></span>
+                <span class="chimpify" data-chimp-type="campaign-groups" data-chimp-campaign-id="1262" data-chimp-num-groups="3" data-chimp-num-days="365"></span>
+                <span class="chimpify" data-chimp-type="campaign-groups" data-chimp-campaign-id="1263" data-chimp-num-groups="3" data-chimp-num-days="365"></span>
+                <span class="chimpify" data-chimp-type="campaign-groups" data-chimp-campaign-id="1264" data-chimp-num-groups="3" data-chimp-num-days="365"></span>
+                <span class="chimpify" data-chimp-type="campaign-groups" data-chimp-campaign-id="1273" data-chimp-num-groups="3" data-chimp-num-days="365"></span>
+              </div>
+
+        </div>
+      </div>
+  </section>
 
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ THE PROJECTS YOU'RE SUPPORTING ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
      <section id="projects">
@@ -194,7 +278,7 @@
       		<div class="pushsection">
 	      		<div class="text-container">
 	        		<h1> Supporting tech for peace </h1>
-		       			<p class="subtitle"> <a href="https://peacegeeks.org"><span>PeaceGeeks</span></a> is a Vancouver-based nonprofit that works with refugees, immigrants and communities at risk to build the digital tools they need for peace and humanitarian action. And we need <em>you</em> to help us make a difference! <br><br><span>Here are the projects you're supporting:</span> </p><br>
+		       			<p class="subtitle"> Every day, conflict and crisis force people to give up their life as they know it. In a time of increasing polarization in digital spaces, the world needs more peacebuilders than ever before.<br><br><a href="https://peacegeeks.org"><span>PeaceGeeks</span></a> is a Vancouver-based nonprofit that builds digital tools to empower communities in the pursuit of peace. Join us to make a difference!<br><br><span>Here are the projects you're supporting:</span> </p><br>
 	        		<div class="row teal-box">
 	          			<div class="column-flex left">
 	          				<h2><a href="http://peacegeeks.org/pathways" target="_blank">Pathways</a> helps refugees and immigrants start their new life in Canada, every step of the way.</h2><br>
@@ -340,10 +424,10 @@
 
     <section id="participant">
         <div class="section-container">
-    	<h1> Meet the #GiveItUp4Peace Community  </h1><h3>Here are some of the participating corporate teams: </h3>
+    	<!--<h1> Meet the #GiveItUp4Peace Community  </h1><h3>Here are some of the participating corporate teams: </h3>-->
     			          <!-- Client Logo Slider -->
 
-          <div class="customer-logos">
+          <!--<div class="customer-logos">
               <div class="slide"><a href="http://axiomzen.co/" target="_blank"><img src="./logos/AxiomZen.png" alt="Axiom Zen #GiveItUp4Peace"></a></div>
               <div class="slide"><a href="https://affinitybridge.com/" target="_blank"><img src="./logos/AffinityBridge.png" alt="Affinity Bridge #GiveItUp4Peace"></a></div>
               <div class="slide"><a href="https://www.airbnb.ca/openhomes" target="_blank"><img src="./logos/Airbnb.png" alt="Airbnb Human Team #GiveItUp4Peace"></a></div>
@@ -351,7 +435,7 @@
               <div class="slide"><a href="https://www.rightmesh.io/" target="_blank"><img src="./logos/RightMesh.png" alt="RightMesh PeaceGeeks GiveItUp4Peace"></a></div>
               <div class="slide"><a href="https://www.hivevancouver.com/" target="_blank"><img src="./logos/HiVE.png" alt="HiVE Vancouver Social Impact GiveItUp4Peace"></a></div>
           </div>
-        </div>
+        </div>-->
 				<div class="testimonials">
 
 						<ul>

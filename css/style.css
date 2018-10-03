@@ -789,13 +789,15 @@ LANDING SECTION
   left:0;
   background: url("../photos/landing.jpg") no-repeat top;
   background-size: cover;
+  box-shadow:inset 0 0 0 2000px rgba(0,0,0,0.75);
+  background-color: #ACDEE2;
 }
 
 #landing .video-player {
   display: inline-block;
   margin: 0;
   position: absolute;
-  top: 40%;
+  top: 50%;
   width:100%;
 }
 
@@ -822,6 +824,10 @@ LANDING SECTION
 
 #landing .video-player .video-link:hover .video-icon {
   background-color: #f09416;
+} 
+
+#landing p span {
+  font-weight: bolder;
 }
 
 /* ------------------- responsive video container
@@ -880,8 +886,8 @@ LANDING SECTION
 
 #count-container a {
     border: 0px;
-    position: absolute;
-    right:4%;
+    display:block;
+    margin: auto;
     transform: scale(0.9);
     z-index: 5;
     width: 200px;
@@ -1034,6 +1040,74 @@ li#cd span {
   outline: none;
 }
 
+/* - - - - - - - - - - -  leaderboard styling   - - - - - - - - - - - - - - - */
+
+#total-funds{
+  font-family: "Poppins", sans-serif;
+  font-size: 60px;
+  color: white;
+  margin-top: 35%;
+  margin-bottom: 10%;
+  position: relative;
+  max-width: 400px;
+  text-align: center;
+  font-weight: 700;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+.campaign-total-color {
+  color: #ffc12f;
+}
+
+p#raised {
+  font-size: 0.3em;
+  line-height: 1.4em;
+  width: 100%;
+  margin-top: 7%;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+
+p#raised span {
+  text-transform: uppercase;
+  font-size: 1.4em;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: #ffc12f;
+}
+
+p#raised span.smaller {
+  font-size: 1.1em;
+  text-transform: none;
+  font-weight: 700;
+}
+
+#leaderboard {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+h4#team-name:hover {
+  color: teal;
+}
+
+/* leaderboard styling */
+
+#featured img {
+  border-radius: 70px;
+}
+
+#featured-container {
+  display: float;
+}
+
+#p-container p{
+  margin-bottom: 4em;
+}
+
+
 /* - - - - - - - - - - - - landing visual asset styling   - - - - - - - - - - - - - - - */
 
 .clearfix:after {
@@ -1046,15 +1120,33 @@ li#cd span {
 
 /* - - - - - - - - - - - - landing on mobile  - - - - - - - - - - - - - - - */
 
-@media only screen and (max-width:1100px) {
-  #count-container a {
-    transform: scale(0.7);
-    top:-1em;
-    right:-1em;
+@media only screen and (min-width:761px) {
+  .hide-on-desktop {
+    display: none;
+    width:0
+    height:0;
   }
 }
 
 @media only screen and (max-width:760px) {
+  #total-funds{
+    font-family: "Poppins", sans-serif;
+    font-size: 60px;
+    color: white;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    position: relative;
+    max-width: 400px;
+    text-align: left;
+    font-weight: 700;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  #p-container p{
+    margin-bottom: 0em;
+  }
+
   #logo-white {
     display: inline-block;
     width: 30%;
@@ -1062,7 +1154,6 @@ li#cd span {
     background-image: transparent;
     background-repeat: no-repeat;
     background-position: left;
-    z-index: 3;
   }
 
   #logo-big {
@@ -1071,19 +1162,29 @@ li#cd span {
     height: 0;
   }
 
-  #text-container {
-    padding-top: 0;
+  .chimpify-container {
+    display:none;
+  }
+
+
+  h4#team-name:hover {
+    font-size: 1.2em;
+    color: teal;
+  }
+
+  #leaderboard {
+    margin-top: 0%;
   }
 
   #landing .landing-vid-container {
     width: 100%;
-    max-height:350px;
+    min-height: 850px;
     top:0;
     left:0;
-    box-shadow:inset 0 0 0 2000px rgba(0,0,0,0.7);
+    background-color: #278186;
   }
 
-  #landing .video-player {
+  /* #landing .video-player {
     display: inline-block;
     margin: 0;
     position: absolute;
@@ -1092,7 +1193,7 @@ li#cd span {
     right: 8em;
     transform: scale(0.8);
     z-index: 8;
-  }
+  } */
 
   #container {
     width: 100%;
@@ -1124,9 +1225,7 @@ li#cd span {
   }
 
   #count-container a {
-    transform: scale(0.5);
-    top:-2.5em;
-    right:-2.5em;
+    transform: scale(0.8);
   }
 
   #landing h2 {
@@ -1140,10 +1239,7 @@ li#cd span {
     max-height: 100vh;
   }
 
-  #landing .video-player {
-    right: 7em;
-    transform: scale(0.5);
-  }
+
 }
 
 /* - - - - - - - - - - - - - - - - - - - - -
@@ -1233,6 +1329,270 @@ ROTATING TEXT SECTION
 
 
 /* - - - - - - - - - - - - - - - - - - - - -
+GALLERY SECTION
+- - - - - - - - - - - - - - - - - - - - - - -  */
+.gallery { 
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    -webkit-column-gap: 10px;
+    -moz-column-gap: 10px;
+    column-gap: 10px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.gallery img { 
+    width: 100%; 
+    height: auto;
+    transition: 500ms;
+    margin-bottom: 10px;
+    opacity: 0.8;
+    page-break-inside: avoid; /* For Firefox. */
+    -webkit-column-break-inside: avoid; /* For Chrome & friends. */
+    break-inside: avoid; /* For standard browsers like IE. :-) */
+}
+
+.gallery img:hover {
+    opacity: 1;
+}
+
+/* .modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: center;
+} */
+
+.modal-img,.model-vid{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: table
+}
+.modal-body{
+  padding: 0px;
+}
+
+.modal-dialog {
+  height: 100%;
+      position: relative;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+  border: none;
+}
+
+@media screen and (max-width: 767px) {
+  .gallery { 
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+    }
+  .gallery div { margin: 0; 
+        width: 200px;
+    }
+  .modal-dialog {
+        margin: 0 5vw;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .gallery { 
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+    }
+    .gallery div { 
+        margin: 0; 
+        width: 200px;
+    }
+}
+
+/* - - - - - - - - - - - - - - - - - - - - -
+TEAMS /INDIVIDUALS SECTION
+- - - - - - - - - - - - - - - - - - - - - - -  */
+
+#teams .row {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding:0;
+  text-align: center;
+}
+
+#teams img {
+  width: 100px;
+  height: 100px;
+}
+
+#individuals .row {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding:0;
+  text-align: center;
+  background: #ffc12f;
+}
+
+#individuals .section-container {
+  background: #ffc12f;
+}
+
+#teams .column-flex {
+  display: inline-block;
+  margin: 4% 2%;
+  width: 20%;
+  min-width: 150px;
+  vertical-align: top;
+}
+
+#individuals .thumb-icon {
+  border-radius: 60px;
+  width: 100px;
+  height: 100px;
+}
+
+#individuals .column-flex {
+  display:inline-block;
+  width: 15%;
+  min-width: 150px;
+  vertical-align: top;
+  margin: 4% 2%;
+}
+
+#individuals h1 {
+  margin-top:0;
+  padding-top: 1.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em
+}
+
+#teams h1 {
+  margin-top:0;
+  padding-top: 1.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+#teams h2 {
+  margin: 5%;
+  padding:0;
+  font-size:1.6em;
+}
+
+#teams h3 {
+  text-transform: uppercase;
+  margin-top:5%;
+  margin-bottom:6%;
+}
+
+#teams h3:hover {
+  color:#f09416;
+}
+
+#teams #btn {
+  padding: 12px;
+}
+
+#individuals h3 {
+  text-align:center;
+  margin-bottom:0;
+  margin-top:3%;
+  color:#ffffff;
+}
+
+
+#individuals img{
+  border: 3px solid transparent;
+}
+
+#individuals img:hover{
+  border: 3px solid #f09416;
+}
+
+#individuals h3:hover {
+  color:#f09416;
+}
+
+#individuals h4 {
+  text-align:center;
+  margin-top:3%;
+  margin-bottom:6%;
+}
+
+#individuals h4:hover {
+  color: #f09416;
+}
+
+#teams #btn{
+  color: #ffffff;
+  font-size:0.8em;
+  text-transform: uppercase;
+  line-height:1.2em;
+  margin:0;
+  box-shadow: 0 2px 10px 0 rgba(0,0,0,0), 0 2px 10px 0 rgba(0,0,0,0);
+}
+
+#teams .campaigns {
+  background-color: #e6f5f6;
+  padding-bottom: 1.5em;
+}
+
+#teams .pushsection {
+  background-color: #e6f5f6;
+}
+
+/*--- teams mobile --*/
+@media only screen and (max-width:900px) {
+  #teams .column-flex {
+    margin-left: 2%;
+    margin-right: 2%;
+    width: 28%;
+  }
+
+  #individuals .column-flex {
+    width: 20%;
+  }
+}
+
+
+@media only screen and (max-width:760px) {
+  #teams .column-flex {
+    margin-left: 2%;
+    margin-right: 2%;
+    width: 45%;
+  }
+
+  #individuals .column-flex {
+    width: 30%;
+  }
+}
+
+@media only screen and (max-width:500px) {
+  #teams .column-flex {
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+
+  #individuals .column-flex {
+    width: 45%;
+  }
+}
+
+/*--- teams mobile --*/
+@media only screen and (max-width:760px) {
+  .flex-grid {
+    display: block;
+  }
+}
+
+/* - - - - - - - - - - - - - - - - - - - - -
 PROJECTS SECTION
 - - - - - - - - - - - - - - - - - - - - - - -  */
 
@@ -1271,9 +1631,9 @@ PROJECTS SECTION
 
 #projects .subtitle {
   text-align: center;
-  margin-top: 1em; 
-  margin-bottom: 1em; 
-  font-size: 1.2em; 
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-size: 1.2em;
   padding-left: 10%;
   padding-right: 10%;
   line-height: 1.4em;
@@ -1329,6 +1689,10 @@ a:focus {
   border-radius: 1em;
 }
 
+#projects .pushsection {
+  margin-top: 10%;
+}
+
 #projects span {
   font-size: 1.1em;
   font-weight: bolder;
@@ -1347,7 +1711,7 @@ a:focus {
   }
 
   #projects .left {
-    margin-bottom: 0em; 
+    margin-bottom: 0em;
   }
 
   #projects .right {
@@ -1356,9 +1720,9 @@ a:focus {
 
   #projects .subtitle {
     text-align: center;
-    margin-top: 1em; 
-    margin-bottom: 1em; 
-    font-size: 1em; 
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 1em;
     padding-left: 0%;
     padding-right: 0%;
     line-height: 1.3em;
