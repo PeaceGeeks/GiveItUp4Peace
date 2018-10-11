@@ -3,32 +3,40 @@ $( document ).ready(function() {
   // Leaderboard
   function formatNumber(num) {
     return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
-  } 
+  }
 
-  var movementCampaignIds = ["1209", 
-                "1236",
-                "1238",
-                "1245",
-                "1248",
-                "1249",
-                "1251",
-                "1259", 
-                "1260", 
-                "1261", 
-                "1262", 
-                "1263",  
-                "1272", 
-                "1273"];
-    var raisedToDate = 0;
-  
-    // Other donations
-    var otherDonations = [];
-    otherDonations["#GiveItUp4Peace with Affinity Bridge!"] = 500;
-    otherDonations["#GiveItUp4Peace 2018 - Community Participants"] = 3232;
-    otherDonations["#GiveItUp4Peace with the PeaceGeeks team!"] = 500;
-  
-    // Array storing total donation amounts (including externals) and html string
-    var donation_data = [];
+  var movementCampaignIds = [
+    "1209",
+    "1236",
+    "1237",
+    "1238",
+    "1245",
+    "1248",
+    "1249",
+    "1251",
+    "1259",
+    "1260",
+    "1261",
+    "1262",
+    "1263",
+    "1272",
+    "1273",
+    "1277",
+  ];
+  // Array storing total donation amounts (including externals) and html string
+  var teams = [];
+  var chimpTotalRaised = 0;
+  // Groups that need their donations adjusted
+  var affinityBridgeGID = 15630;
+  var communityParticipantsGID = 14985;
+  var peacegeeksGID = 14838;
+  var blackFamilyGID = 15763;
+  var groupIdsForDonationAdjustments = [
+    affinityBridgeGID,
+    communityParticipantsGID,
+    peacegeeksGID,
+    blackFamilyGID,
+  ];
 
   $.ajax({
     type: 'GET',
@@ -38,79 +46,65 @@ $( document ).ready(function() {
       withCredentials: false
     },
     success:function(response) {
-      $.each(response, function(index, object) {
-
-        //console.log(object);
-
-          // var campaignName  = object.name.substring(0, object.name.indexOf('| TechPong') - 1);
-          var campaignName  = object.name
-
-          // Add additional donations
-          if(otherDonations[campaignName] === undefined) {
-              var totalGifts = object.money_raised = parseInt(object.money_raised).toFixed(2);
-              raisedToDate = Number(raisedToDate) + Number(totalGifts);
+      $.each(response, function (index, object) {
+        var groupId = object.group_id;
+        var chimpMoney = Number(object.money_raised);
+        // Handle adjustments
+        if (groupIdsForDonationAdjustments.includes(groupId)) {
+          if (groupId === affinityBridgeGID) {
+            chimpMoney = (chimpMoney * 2) + 1000;
           }
-          else {
-              var totalGifts = parseInt(object.money_raised);
-              totalGifts += otherDonations[campaignName];
-              totalGifts = totalGifts.toFixed(2);
-              raisedToDate = Number(raisedToDate) + Number(totalGifts);
+          if (groupId === communityParticipantsGID) {
+            chimpMoney = ((chimpMoney - 15) * 2);
           }
-      
-          // Hack to customize campaign names
-          var CompanyName = campaignName.replace('#GiveItUp4Peace with','').replace('!','').replace('the','');
-      
-          // Store donation data
-          donation_data.push({
-            'amount': Number(totalGifts),
-            'htmlString': '<a href="'+object.campaign_url+'" target="_blank"><div class="column-flex">' +
-                      '<img src="'+object.campaign_logo+'" alt="' + campaignName + '" />' +
-                      '<h3>' + CompanyName + '</h3>' +
-                      '<span id="btn"><h2>$' + totalGifts + '</h2>Donate or join team</span>' +
-                      '</div></a>'
-          });
-        });
-    
-      // Hack to add in Collier sponsorship
-      /*
-      var totalGifts = 5000;
-      totalGifts = totalGifts.toFixed(2);
-      raisedToDate = Number(raisedToDate) + Number(totalGifts);
-      // Store donation data
-      donation_data.push({
-      'amount': Number(totalGifts),
-      'htmlString': '<div class="campaign row">' +
-      '<div class="col-sm-3">' +
-      '<img src="http://go.chimp.net/techpong2016-tech/images/collier_logo_square.png" />' +
-      '</div>' +
-      '<div class="col-sm-9">' +
-      '<h6>Colliers International (Sponsor)</h6>' +
-      '<p>$' + totalGifts + '</p>' +
-      '</div>' +
-      '</div>'
-      });
-      */
-    
-      // Sort donations and append to campaign list
-      donation_data.sort(function(a, b) {
-          a = a.amount;
-          b = b.amount;
-          return a < b ? 1 : (a > b ? -1 : 0);
-      });
-    
-        for(var i = 1; i < donation_data.length; i++) {
-          $('.campaigns').append(donation_data[i].htmlString);
+          if (groupId === peacegeeksGID) {
+            chimpMoney = ((chimpMoney - 70) * 2);
+          }
+          if (groupId === blackFamilyGID) {
+            chimpMoney = chimpMoney + 1370;
+          }
+        } else {
+          chimpMoney = chimpMoney * 2;
         }
-    
-        // Display final total
-        raisedToDate = formatNumber(raisedToDate);
-        $('.campaign-total').append('<span class=campaign-total-color>$' + raisedToDate + '</span>');
+        // Update total
+        chimpTotalRaised += chimpMoney;
 
-        // Display final total
-        raisedToDate = formatNumber(raisedToDate);
-        $('.campaign-total2').append('<span class=campaign-total-color>$' + raisedToDate + '</span>');
+        // Hack to customize campaign names
+        var companyName = object.name.replace('#GiveItUp4Peace with', '').replace('!', '').replace('the', '');
+        // Store donation data
+        teams.push({
+          'chimpMoney': chimpMoney,
+          'htmlString': '<a href="' + object.campaign_url + '" target="_blank"><div class="column-flex">' +
+            '<img src="' + object.campaign_logo + '" alt="' + object.name + '" />' +
+            '<h3>' + companyName + '</h3>' +
+            '<span id="btn"><h2>$' + chimpMoney + '</h2>Donate or join team</span>' +
+            '</div></a>'
+        });
+      });
+
+      const compareFn = function(first, second) {
+        if (first.chimpMoney > second.chimpMoney) {
+          return -1;
+        }
+        if(first.chimpMoney < second.chimpMoney) {
+          return 1;
+        }
+        return 0;
+      }
+      teams.sort(compareFn);
+
+      for (var i = 0; i < teams.length; i++) {
+        $('.campaigns').append(teams[i].htmlString);
+      }
+
+      // Display final total
+      var otherDonations = 4052
+      var total = chimpTotalRaised + otherDonations;
+      var totalHtml = '<span class=campaign-total-color>$' + formatNumber(total) + '</span>'
+      $('.campaign-total').append(totalHtml);
+      $('.campaign-total2').append(totalHtml);
     }
-  });        
+  });
 });
 
 
