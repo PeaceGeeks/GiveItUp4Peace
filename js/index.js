@@ -19,13 +19,14 @@ $( document ).ready(function() {
     "1261",
     "1262",
     "1263",
+    "1264",
     "1272",
     "1273",
     "1277",
   ];
   // Array storing total donation amounts (including externals) and html string
   var teams = [];
-  var chimpTotalRaised = 0;
+  var totalRaised = 0;
   // Groups that need their donations adjusted
   var affinityBridgeGID = 15630;
   var communityParticipantsGID = 14985;
@@ -49,28 +50,31 @@ $( document ).ready(function() {
       $.each(response, function (index, object) {
         var groupId = object.group_id;
         var chimpMoney = Number(object.money_raised);
+
         // Handle adjustments
+        // Format: Online total with match + offline total with match
         if (groupIdsForDonationAdjustments.includes(groupId)) {
           if (groupId === affinityBridgeGID) {
             chimpMoney = (chimpMoney * 2) + 1000;
           }
           if (groupId === communityParticipantsGID) {
-            chimpMoney = ((chimpMoney - 15) * 2);
+            chimpMoney = ((chimpMoney - 15) * 2) + 1682;
           }
           if (groupId === peacegeeksGID) {
-            chimpMoney = ((chimpMoney - 70) * 2);
+            chimpMoney = ((chimpMoney - 70) * 2) + 500;
           }
           if (groupId === blackFamilyGID) {
-            chimpMoney = chimpMoney + 1370;
+            chimpMoney = (chimpMoney + 70) + 1370;
           }
         } else {
           chimpMoney = chimpMoney * 2;
         }
         // Update total
-        chimpTotalRaised += chimpMoney;
+        totalRaised += chimpMoney;
 
         // Hack to customize campaign names
         var companyName = object.name.replace('#GiveItUp4Peace with', '').replace('!', '').replace('the', '');
+        console.log(companyName + ': ' + chimpMoney);
         // Store donation data
         teams.push({
           'chimpMoney': chimpMoney,
@@ -98,9 +102,7 @@ $( document ).ready(function() {
       }
 
       // Display final total
-      var otherDonations = 4052;
-      var total = chimpTotalRaised + otherDonations;
-      var totalHtml = '<span class=campaign-total-color>$' + formatNumber(total) + '</span>';
+      var totalHtml = '<span class=campaign-total-color>$' + formatNumber(totalRaised) + '</span>';
       $('.campaign-total').append(totalHtml);
       $('.campaign-total2').append(totalHtml);
     }
