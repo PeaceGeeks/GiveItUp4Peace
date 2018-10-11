@@ -27,6 +27,8 @@ $( document ).ready(function() {
   // Array storing total donation amounts (including externals) and html string
   var teams = [];
   var totalRaised = 0;
+  var totalRawRaised = 0;
+  var matchCap = 20000;
   // Group ids (a subset)
   var affinityBridgeGID = 15630;
   var communityParticipantsGID = 14985;
@@ -55,49 +57,51 @@ $( document ).ready(function() {
       $.each(response, function (index, object) {
         var groupId = object.group_id;
         var chimpMoney = Number(object.money_raised);
+        var groupTotal = 0;
 
         // Handle adjustments
-        // Format: Online total with match + offline total with match
+        // Format: groupTotal = Online total with match + offline total with match
         if (groupIdsForDonationAdjustments.includes(groupId)) {
           if (groupId === affinityBridgeGID) {
-            chimpMoney = (chimpMoney * 2) + 1000;
+            groupTotal = (chimpMoney * 2) + 1000;
           }
           if (groupId === communityParticipantsGID) {
-            chimpMoney = ((chimpMoney - 15) * 2) + 1682;
+            groupTotal = ((chimpMoney - 15) * 2) + 3364;
           }
           if (groupId === peacegeeksGID) {
-            chimpMoney = ((chimpMoney - 70) * 2) + 500;
+            groupTotal = ((chimpMoney - 70) * 2) + 1000;
           }
           if (groupId === blackFamilyGID) {
-            chimpMoney = (chimpMoney + 70) + 1370;
+            groupTotal = (chimpMoney + 70) + 2620;
           }
         } else {
-          chimpMoney = chimpMoney * 2;
+          groupTotal = chimpMoney * 2;
         }
         // Update total
-        totalRaised += chimpMoney;
+        totalRaised += groupTotal;
+        totalRawRaised += groupTotal / 2;
 
         // Hack to customize campaign names
         var companyName = object.name.replace('#GiveItUp4Peace with', '').replace('!', '').replace('the', '');
-        console.log(companyName + ': ' + chimpMoney);
+        console.log(companyName + ': ' + groupTotal);
         // Store donation data
         if (!groupIdBlacklist.includes(groupId)) {
           teams.push({
-            'chimpMoney': chimpMoney,
+            'groupTotal': groupTotal,
             'htmlString': '<a href="' + object.campaign_url + '" target="_blank"><div class="column-flex">' +
               '<img src="' + object.campaign_logo + '" alt="' + object.name + '" />' +
               '<h3>' + companyName + '</h3>' +
-              '<span id="btn"><h2>$' + chimpMoney + '</h2>Donate or join team</span>' +
+              '<span id="btn"><h2>$' + groupTotal + '</h2>Donate or join team</span>' +
               '</div></a>'
           });
         }
       });
 
       const compareFn = function(first, second) {
-        if (first.chimpMoney > second.chimpMoney) {
+        if (first.groupTotal > second.groupTotal) {
           return -1;
         }
-        if(first.chimpMoney < second.chimpMoney) {
+        if(first.groupTotal < second.groupTotal) {
           return 1;
         }
         return 0;
@@ -110,8 +114,10 @@ $( document ).ready(function() {
 
       // Display final total
       var totalHtml = '<span class=campaign-total-color>$' + formatNumber(totalRaised) + '</span>';
+      var rawHtml = totalRawRaised > matchCap ? '$' + formatNumber(matchCap) : '$' + formatNumber(totalRawRaised);
       $('.campaign-total').append(totalHtml);
       $('.campaign-total2').append(totalHtml);
+      $('#raw-total').append(rawHtml);
     }
   });
 });

@@ -1069,7 +1069,7 @@ p#raised {
   font-weight: 400;
 }
 
-p#raised span {
+p#raised>span {
   text-transform: uppercase;
   font-size: 1.4em;
   font-family: "Poppins", sans-serif;
@@ -1081,6 +1081,10 @@ p#raised span.smaller {
   font-size: 1.1em;
   text-transform: none;
   font-weight: 700;
+}
+
+p#raised .campaign-match-blurb {
+  font-size: 18px;
 }
 
 #leaderboard {
