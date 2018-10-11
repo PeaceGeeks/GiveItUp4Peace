@@ -27,16 +27,21 @@ $( document ).ready(function() {
   // Array storing total donation amounts (including externals) and html string
   var teams = [];
   var totalRaised = 0;
-  // Groups that need their donations adjusted
+  // Group ids (a subset)
   var affinityBridgeGID = 15630;
   var communityParticipantsGID = 14985;
   var peacegeeksGID = 14838;
   var blackFamilyGID = 15763;
+  // Groups that need their donations adjusted
   var groupIdsForDonationAdjustments = [
     affinityBridgeGID,
     communityParticipantsGID,
     peacegeeksGID,
     blackFamilyGID,
+  ];
+  // Groups that shouldn't be public facing
+  var groupIdBlacklist = [
+    communityParticipantsGID,
   ];
 
   $.ajax({
@@ -76,14 +81,16 @@ $( document ).ready(function() {
         var companyName = object.name.replace('#GiveItUp4Peace with', '').replace('!', '').replace('the', '');
         console.log(companyName + ': ' + chimpMoney);
         // Store donation data
-        teams.push({
-          'chimpMoney': chimpMoney,
-          'htmlString': '<a href="' + object.campaign_url + '" target="_blank"><div class="column-flex">' +
-            '<img src="' + object.campaign_logo + '" alt="' + object.name + '" />' +
-            '<h3>' + companyName + '</h3>' +
-            '<span id="btn"><h2>$' + chimpMoney + '</h2>Donate or join team</span>' +
-            '</div></a>'
-        });
+        if (!groupIdBlacklist.includes(groupId)) {
+          teams.push({
+            'chimpMoney': chimpMoney,
+            'htmlString': '<a href="' + object.campaign_url + '" target="_blank"><div class="column-flex">' +
+              '<img src="' + object.campaign_logo + '" alt="' + object.name + '" />' +
+              '<h3>' + companyName + '</h3>' +
+              '<span id="btn"><h2>$' + chimpMoney + '</h2>Donate or join team</span>' +
+              '</div></a>'
+          });
+        }
       });
 
       const compareFn = function(first, second) {
