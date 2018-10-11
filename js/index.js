@@ -98,9 +98,9 @@ $( document ).ready(function() {
       }
 
       // Display final total
-      var otherDonations = 4052
+      var otherDonations = 4052;
       var total = chimpTotalRaised + otherDonations;
-      var totalHtml = '<span class=campaign-total-color>$' + formatNumber(total) + '</span>'
+      var totalHtml = '<span class=campaign-total-color>$' + formatNumber(total) + '</span>';
       $('.campaign-total').append(totalHtml);
       $('.campaign-total2').append(totalHtml);
     }
