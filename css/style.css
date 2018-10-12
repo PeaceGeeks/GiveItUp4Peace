@@ -2513,7 +2513,7 @@ Image Modal
 
 #fm-medium-embed{
   box-sizing: border-box;
-  margin: 0 auto;
+  margin: 0 auto 5em auto;
   text-align: center;
 }
 
