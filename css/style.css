@@ -2532,17 +2532,13 @@ Image Modal
 
 .fm-post-title{
   font-size: 20px;
-  height: 25px;
-  white-space: nowrap;
+  height: 50px;
   padding-right: 10px;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .fm-post-sub-title{
-  min-height: 130px;
+  min-height: 100px;
   line-height: 24px;
-  color: #333;
 }
 
 .fm-medium-profile{
@@ -2556,7 +2552,7 @@ Image Modal
   background: #fff;
   padding: 15px;
   border-radius: 3px;
-  border: 2px solid #4285f4;
+  border: 2px solid #f09416;
   box-shadow: 0 3px 15px rgba(0,0,0,0.15);
   
 }
