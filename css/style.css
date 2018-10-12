@@ -2525,37 +2525,37 @@ img{
     height:100%;
    
 }
-    .fm-post-wrapper{
-    font-size: 39px;
-    display: flex;
-    flex-flow: initial;
-    font-size: 39px;
-    display: flex;
-    flex-flow: initial;
-    flex-wrap: wrap;
-    justify-content: center;
-    }
-    .fm-post{
-    display: grid;
-    width: 320px;
-    height: 430px;
-    grid-template-rows: 185px auto 1fr;
-    cursor: pointer;
-    -webkit-box-shadow: 0px 40px 50px 0px rgba(0,0,0,0.25);
-    -moz-box-shadow: 0px 40px 50px 0px rgba(0,0,0,0.25);
-    box-shadow: 0px 40px 50px 0px rgba(0,0,0,0.25);
-    transition: all 0.2s ease-in-out;
-    margin-bottom: 60px;
-      margin-left:10px
+.fm-post-wrapper{
+  font-size: 39px;
+  display: flex;
+  flex-flow: initial;
+  font-size: 39px;
+  display: flex;
+  flex-flow: initial;
+  flex-wrap: wrap;
+  justify-content: center;
+  }
+.fm-post{
+  display: grid;
+  width: 320px;
+  height: 430px;
+  grid-template-rows: 185px auto 1fr;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 40px 50px 0px rgba(0,0,0,0.25);
+  -moz-box-shadow: 0px 40px 50px 0px rgba(0,0,0,0.25);
+  box-shadow: 0px 40px 50px 0px rgba(0,0,0,0.25);
+  transition: all 0.2s ease-in-out;
+  margin-bottom: 60px;
+    margin-left:10px
 }
   
     
-    .fm-post-image{
-            grid-row-start: 1;
+  .fm-post-image{
+    grid-row-start: 1;
     grid-row-end: 1;
-      width: 320px;
+    width: 320px;
     }
-    .fm-post-title{
+  .fm-post-title{
    grid-row-start: 2;
     grid-row-end: 2;
     text-align: start;
@@ -2564,7 +2564,7 @@ img{
     margin-bottom: unset;
     padding-left: 25px;
     }
-    .fm-post-sub-title{
+  .fm-post-sub-title{
     margin-top: 10px;
     margin-bottom: 1%;
     grid-row-start: 3;
@@ -2572,11 +2572,33 @@ img{
     align-self: start;
     justify-self: start;
     }
+        
+  #fm-medium-embed p{
+      margin-bottom: unset;
+    padding: 25px;
+    /* padding-right: unset; */
+    padding-top: unset;
+    padding-bottom: unset;
+    /* margin-right: 100000px; */
+    margin-top: unset;
+    font-size: 15px;
+    width: 275px;
+    grid-column-start: 1;
+    /* word-wrap: break-word; */
+    word-break: break-all;
+    grid-column-end: 1;
+    line-height: 1;
+        
+    }
+
+  #fm-medium-embed a{
+    font-size: 30px;    
+    }
     
-    .fm-post-read-more{
-        grid-row-start: 4;
+  .fm-post-read-more{
+    grid-row-start: 4;
     grid-row-end: 4;
-        align-self: center;
+    align-self: center;
     margin-bottom: unset;
     margin-top: unset;
     line-height: 1em;
