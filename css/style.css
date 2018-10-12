@@ -1083,8 +1083,10 @@ p#raised span.smaller {
   font-weight: 700;
 }
 
-p#raised .campaign-match-blurb {
-  font-size: 18px;
+p#raised span.campaign-match-blurb {
+  font-size: 0.9em;
+  text-transform: none;
+  font-weight: 700;
 }
 
 #leaderboard {
@@ -1182,7 +1184,7 @@ h4#team-name:hover {
 
   #landing .landing-vid-container {
     width: 100%;
-    min-height: 850px;
+    min-height: 900px;
     top:0;
     left:0;
     background-color: #278186;
@@ -2506,3 +2508,83 @@ Image Modal
     max-width: 90%;
   }
 }
+
+/*Medium feed css*/
+
+
+#fm-medium-embed{
+margin-right: 10px;
+    margin-top: 40px;
+    }    
+.fm-medium-profile{
+    display:none;
+}
+img{
+    object-fit: cover;
+    width:100%;
+    height:100%;
+   
+}
+    .fm-post-wrapper{
+    font-size: 39px;
+    display: flex;
+    flex-flow: initial;
+    font-size: 39px;
+    display: flex;
+    flex-flow: initial;
+    flex-wrap: wrap;
+    justify-content: center;
+    }
+    .fm-post{
+    display: grid;
+    width: 320px;
+    height: 430px;
+    grid-template-rows: 185px auto 1fr;
+    cursor: pointer;
+    -webkit-box-shadow: 0px 40px 50px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 40px 50px 0px rgba(0,0,0,0.25);
+    box-shadow: 0px 40px 50px 0px rgba(0,0,0,0.25);
+    transition: all 0.2s ease-in-out;
+    margin-bottom: 60px;
+      margin-left:10px
+}
+  
+    
+    .fm-post-image{
+            grid-row-start: 1;
+    grid-row-end: 1;
+      width: 320px;
+    }
+    .fm-post-title{
+   grid-row-start: 2;
+    grid-row-end: 2;
+    text-align: start;
+    line-height: 1em;
+    margin-top: 9px;
+    margin-bottom: unset;
+    padding-left: 25px;
+    }
+    .fm-post-sub-title{
+    margin-top: 10px;
+    margin-bottom: 1%;
+    grid-row-start: 3;
+    grid-row-end: 3;
+    align-self: start;
+    justify-self: start;
+    }
+    
+    .fm-post-read-more{
+        grid-row-start: 4;
+    grid-row-end: 4;
+        align-self: center;
+    margin-bottom: unset;
+    margin-top: unset;
+    line-height: 1em;
+    font-size: 30%;
+    margin-bottom: 10px;
+}
+
+figure{
+  display:none;
+}
+

@@ -66,13 +66,13 @@ $( document ).ready(function() {
             groupTotal = (chimpMoney * 2) + 1000;
           }
           if (groupId === communityParticipantsGID) {
-            groupTotal = ((chimpMoney - 15) * 2) + 3364;
+            groupTotal = ((chimpMoney - 15) * 2) + 3364 + 300;
           }
           if (groupId === peacegeeksGID) {
             groupTotal = ((chimpMoney - 70) * 2) + 1000;
           }
           if (groupId === blackFamilyGID) {
-            groupTotal = (chimpMoney + 70) + 2620;
+            groupTotal = (chimpMoney + 70) + 3620;
           }
         } else {
           groupTotal = chimpMoney * 2;
@@ -121,7 +121,6 @@ $( document ).ready(function() {
     }
   });
 });
-
 
 /* Client Logo Slider */
 
