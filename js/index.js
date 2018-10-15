@@ -72,7 +72,7 @@ $( document ).ready(function() {
             groupTotal = ((chimpMoney - 70) * 2) + 1000;
           }
           if (groupId === blackFamilyGID) {
-            groupTotal = (chimpMoney + 70) + 3620;
+            groupTotal = (chimpMoney + 70) + 3720;
           }
         } else {
           groupTotal = chimpMoney * 2;
