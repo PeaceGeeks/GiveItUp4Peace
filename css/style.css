@@ -540,6 +540,15 @@ li#high4 {
   border-radius: 8px;
 }
 
+#donate-btn-mobile {
+  border-radius: 8px;
+  font-size: 1em;
+  letter-spacing: 0;
+  background-color: #FFC12F;
+  padding: 10px;
+  margin-right: 10px;
+}
+
 /* mobile navigation
 --------------------------------------------------------------------- */
 @media only screen and (max-width:760px) {
@@ -2027,6 +2036,7 @@ PARTICIPANT SECTION
 
 #participant .section-container {
   height:auto;
+  padding-top: 10em;
 }
 
 #instafeed ul { margin: 0; padding: 0; list-style: none;}

@@ -34,12 +34,14 @@ $( document ).ready(function() {
   var communityParticipantsGID = 14985;
   var peacegeeksGID = 14838;
   var blackFamilyGID = 15763;
+  var hiveGID = 14972;
   // Groups that need their donations adjusted
   var groupIdsForDonationAdjustments = [
     affinityBridgeGID,
     communityParticipantsGID,
     peacegeeksGID,
     blackFamilyGID,
+    hiveGID,
   ];
   // Groups that shouldn't be public facing
   var groupIdBlacklist = [
@@ -72,7 +74,10 @@ $( document ).ready(function() {
             groupTotal = ((chimpMoney - 70) * 2) + 1000;
           }
           if (groupId === blackFamilyGID) {
-            groupTotal = (chimpMoney + 70) + 3720;
+            groupTotal = (chimpMoney * 2) + 3720;
+          }
+          if (groupId === hiveGID) {
+            groupTotal = (chimpMoney * 2) + 300;
           }
         } else {
           groupTotal = chimpMoney * 2;
