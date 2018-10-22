@@ -68,16 +68,16 @@ $( document ).ready(function() {
             groupTotal = (chimpMoney * 2) + 1000;
           }
           if (groupId === communityParticipantsGID) {
-            groupTotal = ((chimpMoney - 15) * 2) + 3364 + 300;
+            groupTotal = ((chimpMoney - 15) * 2) + 8664;
           }
           if (groupId === peacegeeksGID) {
             groupTotal = ((chimpMoney - 70) * 2) + 1000;
           }
           if (groupId === blackFamilyGID) {
-            groupTotal = (chimpMoney * 2) + 3720;
+            groupTotal = (chimpMoney * 2) + 4220;
           }
           if (groupId === hiveGID) {
-            groupTotal = (chimpMoney * 2) + 300;
+            groupTotal = (chimpMoney * 2) + 480;
           }
         } else {
           groupTotal = chimpMoney * 2;
