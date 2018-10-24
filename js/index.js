@@ -71,13 +71,13 @@ $( document ).ready(function() {
             groupTotal = ((chimpMoney - 15) * 2) + 8664;
           }
           if (groupId === peacegeeksGID) {
-            groupTotal = ((chimpMoney - 70) * 2) + 1000;
+            groupTotal = ((chimpMoney - 70) * 2) + 2000;
           }
           if (groupId === blackFamilyGID) {
             groupTotal = (chimpMoney * 2) + 4220;
           }
           if (groupId === hiveGID) {
-            groupTotal = (chimpMoney * 2) + 480;
+            groupTotal = (chimpMoney * 2) + 780;
           }
         } else {
           groupTotal = chimpMoney * 2;
