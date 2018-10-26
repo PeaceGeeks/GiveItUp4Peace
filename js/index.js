@@ -301,7 +301,7 @@ $(document).ready(function(){
      var minutesElement = document.querySelector("#minutes");
      var secondsElement = document.querySelector("#seconds");
      var containerElement = document.querySelector("#countdown");
-     var endDate = "2018/10/31"
+     var endDate = "2018/11/01"
 
      var myCountDown = new ysCountDown(endDate, function (remaining, finished) {
 
