@@ -68,13 +68,13 @@ $( document ).ready(function() {
             groupTotal = (chimpMoney * 2) + 1000;
           }
           if (groupId === communityParticipantsGID) {
-            groupTotal = ((chimpMoney - 15) * 2) + 13664;
+            groupTotal = ((chimpMoney - 15) * 2) + 3664 + 10000;
           }
           if (groupId === peacegeeksGID) {
-            groupTotal = ((chimpMoney - 120) * 2) + 2500;
+            groupTotal = ((chimpMoney - 120) * 2) + 2700;
           }
           if (groupId === blackFamilyGID) {
-            groupTotal = (chimpMoney * 2) + 4620;
+            groupTotal = (chimpMoney * 2) + 4720;
           }
           if (groupId === hiveGID) {
             groupTotal = (chimpMoney * 2) + 780;

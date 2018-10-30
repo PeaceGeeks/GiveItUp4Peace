@@ -1055,7 +1055,7 @@ li#cd span {
   font-family: "Poppins", sans-serif;
   font-size: 60px;
   color: white;
-  margin-top: 35%;
+  margin-top: 50%;
   margin-bottom: 10%;
   position: relative;
   max-width: 400px;
@@ -1070,10 +1070,10 @@ li#cd span {
 }
 
 p#raised {
-  font-size: 0.3em;
+  font-size: 0.28em;
   line-height: 1.4em;
   width: 100%;
-  margin-top: 7%;
+  margin-top: 10%;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
 }
@@ -1265,6 +1265,18 @@ ROTATING TEXT SECTION
   background-color: #278186;
 }
 
+#rotating h1 {
+  color: #ffffff;
+}
+
+#rotating .subt {
+  color: #ffffff;
+  padding-left: 15%;
+  padding-right: 15%;
+  font-size: 1.1em;
+  line-height: 1.6em;
+}
+
 #rotating .sentence-container {
   display: block;
   width: 94%;
@@ -1342,6 +1354,14 @@ ROTATING TEXT SECTION
   transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
+@media only screen and (max-width:760px) {
+  #rotating .subt {
+    padding-left: 1%;
+    padding-right: 1%;
+    font-size: 1em;
+    text-align: left
+  }
+}
 
 /* - - - - - - - - - - - - - - - - - - - - -
 GALLERY SECTION
