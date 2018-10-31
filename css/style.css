@@ -1269,14 +1269,6 @@ ROTATING TEXT SECTION
   color: #ffffff;
 }
 
-#rotating .subt {
-  color: #ffffff;
-  padding-left: 15%;
-  padding-right: 15%;
-  font-size: 1.1em;
-  line-height: 1.6em;
-}
-
 #rotating .sentence-container {
   display: block;
   width: 94%;
@@ -1352,15 +1344,6 @@ ROTATING TEXT SECTION
 #rotating .letter.in {
   transform: rotateX(0deg);
   transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-@media only screen and (max-width:760px) {
-  #rotating .subt {
-    padding-left: 1%;
-    padding-right: 1%;
-    font-size: 1em;
-    text-align: left
-  }
 }
 
 /* - - - - - - - - - - - - - - - - - - - - -
@@ -1664,7 +1647,7 @@ PROJECTS SECTION
   line-height: 1.3em;
 }
 
-#projects .subtitle {
+.subtitle {
   text-align: center;
   margin-top: 1em;
   margin-bottom: 1em;
@@ -1672,6 +1655,10 @@ PROJECTS SECTION
   padding-left: 10%;
   padding-right: 10%;
   line-height: 1.4em;
+}
+
+.subtitle span {
+  color: #ffffff;
 }
 
 #projects h2 span {
@@ -1753,7 +1740,7 @@ a:focus {
     margin-top: 0em;
   }
 
-  #projects .subtitle {
+  .subtitle {
     text-align: center;
     margin-top: 1em;
     margin-bottom: 1em;
