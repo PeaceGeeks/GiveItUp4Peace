@@ -69,7 +69,7 @@ $( document ).ready(function() {
             groupTotal = (chimpMoney * 2) + 1000;
           }
           if (groupId === communityParticipantsGID) {
-            groupTotal = ((chimpMoney - 15) * 2) + 3664 + 10000;
+            groupTotal = ((chimpMoney - 15) * 2) + 3664 + 5000;
           }
           if (groupId === peacegeeksGID) {
             groupTotal = ((chimpMoney - 120) * 2) + 2900;
