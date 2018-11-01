@@ -78,7 +78,7 @@ $( document ).ready(function() {
             groupTotal = (chimpMoney * 2) + 4820;
           }
           if (groupId === hiveGID) {
-            groupTotal = (chimpMoney * 2) + 780;
+            groupTotal = (chimpMoney * 2) + 1280;
           }
           if (groupId === airbnbGID) {
             groupTotal = (chimpMoney * 2) + 6500;
@@ -305,7 +305,7 @@ $(document).ready(function(){
      var minutesElement = document.querySelector("#minutes");
      var secondsElement = document.querySelector("#seconds");
      var containerElement = document.querySelector("#countdown");
-     var endDate = "2018/11/13"
+     var endDate = "2018/11/14"
 
      var myCountDown = new ysCountDown(endDate, function (remaining, finished) {
 
