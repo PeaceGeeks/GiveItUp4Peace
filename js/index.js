@@ -305,12 +305,12 @@ $(document).ready(function(){
      var minutesElement = document.querySelector("#minutes");
      var secondsElement = document.querySelector("#seconds");
      var containerElement = document.querySelector("#countdown");
-     var endDate = "2018/11/01"
+     var endDate = "2018/11/13"
 
      var myCountDown = new ysCountDown(endDate, function (remaining, finished) {
 
        if (finished) {
-         containerElement.textContent = "All donations for #GiveItUp4Peace matched until Nov. 12!";
+         containerElement.textContent = "Campaign has ended";
        }
 
        daysElement.textContent = remaining.totalDays;
