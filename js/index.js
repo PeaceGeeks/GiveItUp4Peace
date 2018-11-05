@@ -69,7 +69,7 @@ $( document ).ready(function() {
             groupTotal = (chimpMoney * 2) + 1000;
           }
           if (groupId === communityParticipantsGID) {
-            groupTotal = ((chimpMoney - 15) * 2) + 3664 + 5000;
+            groupTotal = ((chimpMoney - 15) * 2) + 3764 + 5000;
           }
           if (groupId === peacegeeksGID) {
             groupTotal = ((chimpMoney - 120) * 2) + 2900;
@@ -78,7 +78,7 @@ $( document ).ready(function() {
             groupTotal = (chimpMoney * 2) + 4820;
           }
           if (groupId === hiveGID) {
-            groupTotal = (chimpMoney * 2) + 1280;
+            groupTotal = (chimpMoney * 2) + 1310;
           }
           if (groupId === airbnbGID) {
             groupTotal = (chimpMoney * 2) + 6500;
