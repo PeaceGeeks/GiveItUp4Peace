@@ -36,6 +36,7 @@ $( document ).ready(function() {
   var hiveGID = 14972;
   var airbnbGID = 15640;
   var friasGID = 15745;
+  var leftGID = 14971;
   // Groups that need their donations adjusted
   var groupIdsForDonationAdjustments = [
     affinityBridgeGID,
@@ -45,6 +46,7 @@ $( document ).ready(function() {
     hiveGID,
     airbnbGID,
     friasGID,
+    leftGID,
   ];
   // Groups that shouldn't be public facing
   var groupIdBlacklist = [
@@ -71,22 +73,25 @@ $( document ).ready(function() {
             groupTotal = (chimpMoney * 2) + 1000;
           }
           if (groupId === communityParticipantsGID) {
-            groupTotal = ((chimpMoney - 15) * 2) + 3814 + 5850;
+            groupTotal = ((chimpMoney - 15) * 2) + 3914 + 5850; // 5850 is the amount added from Black Family Foundation donation
           }
           if (groupId === peacegeeksGID) {
             groupTotal = ((chimpMoney - 120) * 2) + 2900;
           }
           if (groupId === blackFamilyGID) {
-            groupTotal = (chimpMoney * 2) + 4820;
+            groupTotal = (chimpMoney * 2) + 5060;
           }
           if (groupId === hiveGID) {
-            groupTotal = (chimpMoney * 2) + 1310;
+            groupTotal = (chimpMoney * 2) + 1560;
           }
           if (groupId === airbnbGID) {
             groupTotal = (chimpMoney * 2) + 6500;
           }
           if (groupId === friasGID) {
             groupTotal = (chimpMoney * 2) + 124;
+          }
+          if (groupId === leftGID) {
+            groupTotal = (chimpMoney * 2) + 504;
           }
         } else {
           groupTotal = chimpMoney * 2;
