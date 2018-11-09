@@ -916,7 +916,7 @@ LANDING SECTION
 
 li#top {
   display: block;
-  font-size: 1em;
+  font-size: 0.8em;
   list-style-type: none;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
@@ -936,7 +936,7 @@ li#top span {
 li#cd {
   display: inline-block;
   margin-right: auto;
-  font-size: 0.8em;
+  font-size: 0.6em;
   list-style-type: none;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
