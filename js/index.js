@@ -73,7 +73,7 @@ $( document ).ready(function() {
             groupTotal = (chimpMoney * 2) + 1000;
           }
           if (groupId === communityParticipantsGID) {
-            groupTotal = ((chimpMoney - 15) * 2) + 4514 + 5850 + 3000; // 5850 is the amount added from Black Family Foundation donation, 3000 is from David Ascher's apple donation
+            groupTotal = ((chimpMoney - 15) * 2) + 7514 + 5850; // 5850 is the amount added from Black Family Foundation donation, 3000 is from David Ascher's apple donation
           }
           if (groupId === peacegeeksGID) {
             groupTotal = ((chimpMoney - 120) * 2) + 3000;
@@ -91,7 +91,7 @@ $( document ).ready(function() {
             groupTotal = (chimpMoney * 2) + 124;
           }
           if (groupId === leftGID) {
-            groupTotal = (chimpMoney * 2) + 504;
+            groupTotal = (chimpMoney * 2);
           }
         } else {
           groupTotal = chimpMoney * 2;
