@@ -1071,15 +1071,15 @@ li#cd span {
 
 p#raised {
   font-size: 0.28em;
-  line-height: 1.4em;
+  line-height: 2em;
   width: 100%;
-  margin-top: 10%;
+  margin-top: 2em;
+  margin-bottom: 2em;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
 }
 
 p#raised>span {
-  text-transform: uppercase;
   font-size: 1.4em;
   font-family: "Poppins", sans-serif;
   font-weight: 700;
