@@ -73,10 +73,10 @@ $( document ).ready(function() {
             groupTotal = (chimpMoney * 2) + 1000;
           }
           if (groupId === communityParticipantsGID) {
-            groupTotal = ((chimpMoney - 15) * 2) + 3914 + 5850; // 5850 is the amount added from Black Family Foundation donation
+            groupTotal = ((chimpMoney - 15) * 2) + 4514 + 5850 + 3000; // 5850 is the amount added from Black Family Foundation donation, 3000 is from David Ascher's apple donation
           }
           if (groupId === peacegeeksGID) {
-            groupTotal = ((chimpMoney - 120) * 2) + 2900;
+            groupTotal = ((chimpMoney - 120) * 2) + 3000;
           }
           if (groupId === blackFamilyGID) {
             groupTotal = (chimpMoney * 2) + 5060;
@@ -97,7 +97,12 @@ $( document ).ready(function() {
           groupTotal = chimpMoney * 2;
         }
         // Update total
+        if (groupTotal > 50000) {
+          totalRaised += (groupTotal / 2) + 25000;
+        } else {
         totalRaised += groupTotal;
+        }
+        
         totalRawRaised += groupTotal / 2;
 
         // Hack to customize campaign names
@@ -315,12 +320,12 @@ $(document).ready(function(){
      var minutesElement = document.querySelector("#minutes");
      var secondsElement = document.querySelector("#seconds");
      var containerElement = document.querySelector("#countdown");
-     var endDate = "2018/11/14"
+     var endDate = "2018/11/13"
 
      var myCountDown = new ysCountDown(endDate, function (remaining, finished) {
 
        if (finished) {
-         containerElement.textContent = "Campaign has ended";
+         containerElement.textContent = "Campaign has ended!";
        }
 
        daysElement.textContent = remaining.totalDays;
