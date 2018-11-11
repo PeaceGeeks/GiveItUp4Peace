@@ -99,7 +99,7 @@ $( document ).ready(function() {
         }
         // Update total
         totalMatched += groupTotal;
-        totalRaised = totalMatched / 2 + 25850
+        totalRaised = totalMatched / 2 + 25850;
         totalRawRaised = totalRaised / 2;
 
         // Hack to customize campaign names
