@@ -26,6 +26,7 @@ $( document ).ready(function() {
   // Array storing total donation amounts (including externals) and html string
   var teams = [];
   var totalRaised = 0;
+  var totalMatched = 0;
   var totalRawRaised = 0;
   var matchCap = 25000;
   // Group ids (a subset)
@@ -73,7 +74,7 @@ $( document ).ready(function() {
             groupTotal = (chimpMoney * 2) + 1000;
           }
           if (groupId === communityParticipantsGID) {
-            groupTotal = ((chimpMoney - 15) * 2) + 7514 + 5850; // 5850 is the amount added from Black Family Foundation donation, 3000 is from David Ascher's apple donation
+            groupTotal = ((chimpMoney - 15) * 2) + 7514; 
           }
           if (groupId === peacegeeksGID) {
             groupTotal = ((chimpMoney - 120) * 2) + 3000;
@@ -97,13 +98,9 @@ $( document ).ready(function() {
           groupTotal = chimpMoney * 2;
         }
         // Update total
-        if (groupTotal > 50000) {
-          totalRaised += (groupTotal / 2) + 25000;
-        } else {
-        totalRaised += groupTotal;
-        }
-        
-        totalRawRaised += groupTotal / 2;
+        totalMatched += groupTotal;
+        totalRaised = totalMatched / 2 + 25850
+        totalRawRaised = totalRaised / 2;
 
         // Hack to customize campaign names
         var companyName = object.name.replace('#GiveItUp4Peace with', '').replace('!', '').replace('the', '');
