@@ -14,10 +14,10 @@ $( document ).ready(function() {
     "1248",
     "1249",
     "1251",
-    "1259",
+    // "1259", // hide Unbounce
     "1261",
     "1262",
-    "1263",
+    // "1263", //hide Elastic Path
     "1264",
     "1272",
     "1273",
@@ -112,7 +112,7 @@ $( document ).ready(function() {
             'htmlString': '<a href="' + object.campaign_url + '" target="_blank"><div class="column-flex">' +
               '<img src="' + object.campaign_logo + '" alt="' + object.name + '" />' +
               '<h3>' + companyName + '</h3>' +
-              '<span id="btn"><h2>$' + groupTotal + '</h2>Donate or join team</span>' +
+              '<span id="btn"><h2>$' + groupTotal + '</h2></span>' +
               '</div></a>'
           });
         }
@@ -175,33 +175,6 @@ $(document).ready(function(){
     $(".fluid-video-wrapper").fitVids();
   });
 
-
-  // Fundraising modal //
-  // Get the modal
-  var modal = document.getElementById('myModal');
-
-  // Get the button that opens the modal
-  var btn = document.getElementById("fund-btn");
-
-  // Get the <span> element that closes the modal
-  var span = document.getElementsByClassName("close")[0];
-
-  // When the user clicks the button, open the modal
-  btn.onclick = function() {
-      modal.style.display = "block";
-  }
-
-  // When the user clicks on <span> (x), close the modal
-  span.onclick = function() {
-      modal.style.display = "none";
-  }
-
-  // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function(event) {
-      if (event.target == modal) {
-          modal.style.display = "none";
-      }
-  }
 
   /*----------------------------------------------------*/
     /* ScrollMagic
@@ -307,30 +280,6 @@ $(document).ready(function(){
     $('ul#nav li a').on("click", function() {
     if (nav.hasClass('mobile')) nav.fadeOut('fast');
     });
-
-    /*-----------------------------------------------------*/
-   /* countdown
-   ------------------------------------------------------ */
-
-    var daysElement = document.querySelector("#days");
-     var hoursElement = document.querySelector("#hours");
-     var minutesElement = document.querySelector("#minutes");
-     var secondsElement = document.querySelector("#seconds");
-     var containerElement = document.querySelector("#countdown");
-     var endDate = "2018/11/13"
-
-     var myCountDown = new ysCountDown(endDate, function (remaining, finished) {
-
-       if (finished) {
-         containerElement.textContent = "Campaign has ended!";
-       }
-
-       daysElement.textContent = remaining.totalDays;
-       hoursElement.textContent = remaining.hours;
-       minutesElement.textContent = remaining.minutes;
-       secondsElement.textContent = remaining.seconds;
-
-     });
 
 
 /*-----------------------------------------------------*/
@@ -524,4 +473,4 @@ $(document).ready(function () {
  * Released under the WTFPL license - http://sam.zoy.org/wtfpl/
  *
  */
-!function(a){"use strict";a.fn.fitVids=function(b){var c={customSelector:null,ignore:null};if(!document.getElementById("fit-vids-style")){var d=document.head||document.getElementsByTagName("head")[0],e=".fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}",f=document.createElement("div");f.innerHTML='<p>x</p><style id="fit-vids-style">'+e+"</style>",d.appendChild(f.childNodes[1])}return b&&a.extend(c,b),this.each(function(){var b=['iframe[src*="player.vimeo.com"]','iframe[src*="youtube.com"]','iframe[src*="youtube-nocookie.com"]','iframe[src*="kickstarter.com"][src*="video.html"]',"object","embed"];c.customSelector&&b.push(c.customSelector);var d=".fitvidsignore";c.ignore&&(d=d+", "+c.ignore);var e=a(this).find(b.join(","));e=e.not("object object"),e=e.not(d),e.each(function(b){var c=a(this);if(!(c.parents(d).length>0||"embed"===this.tagName.toLowerCase()&&c.parent("object").length||c.parent(".fluid-width-video-wrapper").length)){c.css("height")||c.css("width")||!isNaN(c.attr("height"))&&!isNaN(c.attr("width"))||(c.attr("height",9),c.attr("width",16));var e="object"===this.tagName.toLowerCase()||c.attr("height")&&!isNaN(parseInt(c.attr("height"),10))?parseInt(c.attr("height"),10):c.height(),f=isNaN(parseInt(c.attr("width"),10))?c.width():parseInt(c.attr("width"),10),g=e/f;if(!c.attr("id")){var h="fitvid"+b;c.attr("id",h)}c.wrap('<div class="fluid-width-video-wrapper"></div>').parent(".fluid-width-video-wrapper").css("padding-top",100*g+"%"),c.removeAttr("height").removeAttr("width")}})})}}(window.jQuery||window.Zepto);pto);
+!function(a){"use strict";a.fn.fitVids=function(b){var c={customSelector:null,ignore:null};if(!document.getElementById("fit-vids-style")){var d=document.head||document.getElementsByTagName("head")[0],e=".fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}",f=document.createElement("div");f.innerHTML='<p>x</p><style id="fit-vids-style">'+e+"</style>",d.appendChild(f.childNodes[1])}return b&&a.extend(c,b),this.each(function(){var b=['iframe[src*="player.vimeo.com"]','iframe[src*="youtube.com"]','iframe[src*="youtube-nocookie.com"]','iframe[src*="kickstarter.com"][src*="video.html"]',"object","embed"];c.customSelector&&b.push(c.customSelector);var d=".fitvidsignore";c.ignore&&(d=d+", "+c.ignore);var e=a(this).find(b.join(","));e=e.not("object object"),e=e.not(d),e.each(function(b){var c=a(this);if(!(c.parents(d).length>0||"embed"===this.tagName.toLowerCase()&&c.parent("object").length||c.parent(".fluid-width-video-wrapper").length)){c.css("height")||c.css("width")||!isNaN(c.attr("height"))&&!isNaN(c.attr("width"))||(c.attr("height",9),c.attr("width",16));var e="object"===this.tagName.toLowerCase()||c.attr("height")&&!isNaN(parseInt(c.attr("height"),10))?parseInt(c.attr("height"),10):c.height(),f=isNaN(parseInt(c.attr("width"),10))?c.width():parseInt(c.attr("width"),10),g=e/f;if(!c.attr("id")){var h="fitvid"+b;c.attr("id",h)}c.wrap('<div class="fluid-width-video-wrapper"></div>').parent(".fluid-width-video-wrapper").css("padding-top",100*g+"%"),c.removeAttr("height").removeAttr("width")}})})}}(window.jQuery||window.Zepto);

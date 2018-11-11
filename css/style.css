@@ -891,68 +891,6 @@ LANDING SECTION
   height: 0;
 }
 
-/* - - - - - - - - - - - - countdown container  - - - - - - - - - - - - - - - */
-
-#count-container a {
-    border: 0px;
-    display:block;
-    margin: auto;
-    transform: scale(0.9);
-    z-index: 5;
-    width: 200px;
-    padding:15px;
-    background: #acdee2;
-    border-radius: 300px;
-    top:1em;
-    text-decoration: none;
-  }
-
-#count-container a:hover {
-    background-color: #c9eaec;
-    text-decoration: none;
-  }
-
-/* - - - - - - - - - - - - countdown - - - - - - - - - - - - - - - */
-
-li#top {
-  display: block;
-  font-size: 0.8em;
-  list-style-type: none;
-  text-transform: uppercase;
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  color: #278186;
-  text-align:center;
-  line-height:1;
-  margin-top:2em;
-}
-
-li#top span {
-  font-size: 4em;
-  color: #278186;
-  line-height:1;
-}
-
-li#cd {
-  display: inline-block;
-  margin-right: auto;
-  font-size: 0.6em;
-  list-style-type: none;
-  text-transform: uppercase;
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  width:30%;
-  color: #278186;
-  line-height:1;
-  text-align:center;
-}
-
-li#cd span {
-  font-size: 3em;
-  color: #278186;
-  line-height:1;
-}
-
 #landing h3 {
   margin-top: 0.5em;
   margin-bottom: 2.5em;
@@ -1055,7 +993,7 @@ li#cd span {
   font-family: "Poppins", sans-serif;
   font-size: 60px;
   color: white;
-  margin-top: 30%;
+  margin-top: 40%;
   margin-bottom: 10%;
   position: relative;
   max-width: 400px;
@@ -1515,7 +1453,7 @@ TEAMS /INDIVIDUALS SECTION
 }
 
 #teams #btn {
-  padding: 12px;
+  padding: 15px;
 }
 
 #individuals h3 {
@@ -1917,6 +1855,7 @@ CORPORATE SECTION
 
 #corporate  .section-container {
   height: 1050px;
+  padding-top: 5em;
 }
 
 #corporate .abt-visual-elements {
@@ -2043,7 +1982,6 @@ PARTICIPANT SECTION
 
 #participant .section-container {
   height:auto;
-  padding-top: 10em;
 }
 
 #instafeed ul { margin: 0; padding: 0; list-style: none;}
