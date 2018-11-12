@@ -77,10 +77,10 @@ $( document ).ready(function() {
             groupTotal = ((chimpMoney - 15) * 2) + 7514; 
           }
           if (groupId === peacegeeksGID) {
-            groupTotal = ((chimpMoney - 120) * 2) + 3000;
+            groupTotal = ((chimpMoney - 120) * 2) + 3350;
           }
           if (groupId === blackFamilyGID) {
-            groupTotal = (chimpMoney * 2) + 5060;
+            groupTotal = (chimpMoney * 2) + 5560;
           }
           if (groupId === hiveGID) {
             groupTotal = (chimpMoney * 2) + 1560;
