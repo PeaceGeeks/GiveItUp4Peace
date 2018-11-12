@@ -80,7 +80,7 @@ $( document ).ready(function() {
             groupTotal = ((chimpMoney - 120) * 2) + 3350;
           }
           if (groupId === blackFamilyGID) {
-            groupTotal = (chimpMoney * 2) + 5560;
+            groupTotal = (chimpMoney * 2) + 6060;
           }
           if (groupId === hiveGID) {
             groupTotal = (chimpMoney * 2) + 1560;
