@@ -73,16 +73,16 @@ $( document ).ready(function() {
         // Format: groupTotal = Online total with match + offline total with match
         if (groupIdsForDonationAdjustments.includes(groupId)) {
           if (groupId === affinityBridgeGID) {
-            groupTotal = (chimpMoney * 2) + 1000;
+            groupTotal = (chimpMoney * 2) + 2600;
           }
           if (groupId === communityParticipantsGID) {
-            groupTotal = ((chimpMoney - 15) * 2) + 9014; 
+            groupTotal = ((chimpMoney - 15) * 2) + 10014; 
           }
           if (groupId === peacegeeksGID) {
             groupTotal = ((chimpMoney - 120) * 2) + 4044.40;
           }
           if (groupId === blackFamilyGID) {
-            groupTotal = (chimpMoney * 2) + 6060;
+            groupTotal = (chimpMoney * 2) + 6070;
           }
           if (groupId === hiveGID) {
             groupTotal = (chimpMoney * 2) + 1560;
