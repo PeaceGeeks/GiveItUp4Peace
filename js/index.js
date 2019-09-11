@@ -65,19 +65,19 @@ $(document).ready(function(){
   var controller = new ScrollMagic.Controller({globalSceneOptions: {duration: 500}});
 
   // build scenes
-  new ScrollMagic.Scene({triggerElement: "#teams"})
+  new ScrollMagic.Scene({triggerElement: "#howitworks"})
           .setClassToggle("#high1", "active")
           // .addIndicators()
           .addTo(controller);
-  new ScrollMagic.Scene({triggerElement: "#projects"})
+  new ScrollMagic.Scene({triggerElement: "#supportnewcomers"})
           .setClassToggle("#high2", "active")
           // .addIndicators()
           .addTo(controller);
-  new ScrollMagic.Scene({triggerElement: "#howitworks"})
+  new ScrollMagic.Scene({triggerElement: "#participant"})
           .setClassToggle("#high3", "active")
           // .addIndicators()
           .addTo(controller);
-  new ScrollMagic.Scene({triggerElement: "#participant"})
+  new ScrollMagic.Scene({triggerElement: "#contact"})
           .setClassToggle("#high4", "active")
           // .addIndicators()
           .addTo(controller);
