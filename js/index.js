@@ -156,7 +156,7 @@ $(document).ready(function(){
   });
 
 
-  // Fundraising modal //
+  /* // Fundraising modal //
   // Get the modal
   var modal = document.getElementById('myModal');
 
@@ -181,7 +181,7 @@ $(document).ready(function(){
       if (event.target == modal) {
           modal.style.display = "none";
       }
-  }
+  } */
 
   /*----------------------------------------------------*/
     /* ScrollMagic
@@ -292,12 +292,12 @@ $(document).ready(function(){
    /* countdown
    ------------------------------------------------------ */
 
-    var daysElement = document.querySelector("#days");
+    /*--var daysElement = document.querySelector("#days");
      var hoursElement = document.querySelector("#hours");
      var minutesElement = document.querySelector("#minutes");
      var secondsElement = document.querySelector("#seconds");
      var containerElement = document.querySelector("#countdown");
-     var endDate = "2018/10/31"
+     var endDate = "2019/10/31"
 
      var myCountDown = new ysCountDown(endDate, function (remaining, finished) {
 
@@ -310,7 +310,7 @@ $(document).ready(function(){
        minutesElement.textContent = remaining.minutes;
        secondsElement.textContent = remaining.seconds;
 
-     });
+     });--*/
 
 
 /*-----------------------------------------------------*/
