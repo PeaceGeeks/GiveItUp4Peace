@@ -1846,7 +1846,7 @@ ABOUT SECTION
   background-size: cover;
   height: 30em;
   z-index: 8;
-  top:50px;
+  top:0px;
 }
 
 #about .abt-text {
