@@ -792,13 +792,13 @@ LANDING SECTION
 #landing .landing-vid-container {
   width: 50%;
   height: 75%;
-  min-height:750px;
+  min-height:650px;
   position: relative;
   top: 65px;
   left:0;
-  background: url("../photos/landing.jpg") no-repeat top;
+  background: url("../photos/landingbg.jpg") no-repeat top;
   background-size: cover;
-  box-shadow:inset 0 0 0 2000px rgba(0,0,0,0.75);
+  box-shadow:inset 0 0 0 2000px rgba(0,0,0,0);
   background-color: #ACDEE2;
 }
 
@@ -806,7 +806,7 @@ LANDING SECTION
   display: inline-block;
   margin: 0;
   position: absolute;
-  top: 50%;
+  top: 40%;
   width:100%;
 }
 
@@ -834,6 +834,11 @@ LANDING SECTION
 #landing .video-player .video-link:hover .video-icon {
   background-color: #f09416;
 } 
+
+#landing p {
+  font-size:1.1em;
+  line-height:1.4em;
+}
 
 #landing p span {
   font-weight: bolder;
@@ -973,7 +978,7 @@ li#cd span {
 }
 
 #text-container {
-  padding-top:1em;
+  padding-top:2em;
 }
 
 #landing h4 {
@@ -1000,12 +1005,13 @@ li#cd span {
   border: none;
   color: black;
   padding: 18px;
-  margin-bottom: 4vh;
-  margin-right: 1vw;
-  margin-left: 1vw;
+  margin-top: 2em;
+  /* margin-bottom: 1em; */
+  /* margin-right: 1vw;
+  margin-left: 1vw; */
   justify-content: center;
   box-shadow: 0 2px 10px 0 rgba(0,0,0,0.1), 0 2px 10px 0 rgba(0,0,0,0.1);
-  font-size: 0.9em;
+  font-size: 1.5em;
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   -moz-border-radius: 15px;
@@ -1193,22 +1199,25 @@ h4#team-name:hover {
 
   #landing .landing-vid-container {
     width: 100%;
-    min-height: 900px;
+
+    min-height: 650px;
+
     top:0;
     left:0;
     background-color: #278186;
+    box-shadow:inset 0 0 0 2000px rgba(0,0,0,0.75);
   }
 
-  /* #landing .video-player {
+  #landing .video-player {
     display: inline-block;
     margin: 0;
     position: absolute;
-    top: 10%;
-    width: 20%;
-    right: 8em;
+    top: 20%;
+    width: 10%;
+    right: 5em;
     transform: scale(0.8);
     z-index: 8;
-  } */
+  } 
 
   #container {
     width: 100%;
@@ -1263,6 +1272,7 @@ ROTATING TEXT SECTION
 
 #rotating .pushsection {
   background-color: #278186;
+  top: 0px !important;
 }
 
 #rotating h1 {
@@ -1276,6 +1286,7 @@ ROTATING TEXT SECTION
   text-align: center;
   padding-bottom: 2em;
   padding-top: 0.8em;
+  background-color: #278186;
 }
 
 #rotating .text-wrap {
@@ -1677,6 +1688,10 @@ PROJECTS SECTION
 
 .fluid-video-wrapper {
   margin-bottom: 3rem;
+  max-width:600px;
+  display:block;
+  margin-left: auto;
+  margin-right:auto;
 }
 
 .orange-box {
@@ -1706,8 +1721,7 @@ a:focus {
 }
 
 #projects .funds-container {
-  padding-left: 1em;
-  padding-right: 1em;
+  padding: 1em;
   border-radius: 1em;
 }
 
@@ -1760,7 +1774,7 @@ HOW IT WORKS SECTION
   display: block;
   width: 100%;
   margin: 0;
-  padding:0;
+  padding-bottom:5em;
   text-align: center;
 }
 
@@ -1832,9 +1846,9 @@ ABOUT SECTION
   width: 32%;
   margin: 0;
   padding: 0;
-  background: url(../photos/abt-photo1.png) no-repeat center;
+  background: url(../photos/pledge-photo.jpg) no-repeat center;
   background-size: cover;
-  height: 70vh;
+  height: 30em;
   z-index: 8;
   top:50px;
 }
@@ -1877,7 +1891,7 @@ ABOUT SECTION
 /*--about mobile--*/
 @media only screen and (max-width:1100px) {
   #about .section-container {
-    height: 110vh;
+    /*height: 110vh;*/
   }
 }
 
@@ -1886,11 +1900,12 @@ ABOUT SECTION
     display: inline-block;
     position:relative;
     width: 100%;
-    margin: 0;
+    margin-bottom:-2em;
     padding: 0;
-    height: 50vh;
+    height: 20em;
     z-index: 8;
     left: 0;
+    top:0;
   }
 
   #about .abt-text {
@@ -1908,24 +1923,28 @@ ABOUT SECTION
 }
 
 /* - - - - - - - - - - - - - - - - - - - - -
-CORPORATE SECTION
+supportnewcomers SECTION
 - - - - - - - - - - - - - - - - - - - - - - -  */
 
-#corporate h1 {
+#supportnewcomers h1 {
   text-align: left;
 }
 
-#corporate  .section-container {
+#supportnewcomers span {
+  font-weight:bolder;
+}
+
+#supportnewcomers  .section-container {
   height: 1050px;
 }
 
-#corporate .abt-visual-elements {
+#supportnewcomers .abt-visual-elements {
   display: inline-block;
   position: absolute;
   width: 42%;
   margin: 0;
   padding: 0;
-  background: url(../photos/corporate-photo-1.jpg) no-repeat center;
+  background: url(../photos/impact.jpeg) no-repeat center;
   background-size: cover;
   height: 80vh;
   z-index: 8;
@@ -1933,7 +1952,7 @@ CORPORATE SECTION
   right: 0;
 }
 
-#corporate .abt-text {
+#supportnewcomers .abt-text {
   display: block;
   position: absolute;
   left: 0;
@@ -1944,7 +1963,7 @@ CORPORATE SECTION
   background-color: #acdee2;
 }
 
-#corporate h4 {
+#supportnewcomers h4 {
   letter-spacing: 0.2px;
   font-size: 1.2em;
   line-height: 1.5;
@@ -1952,24 +1971,24 @@ CORPORATE SECTION
 }
 
 
-#corporate #btn {
+#supportnewcomers #btn {
   margin-right: 0;
   margin-left: 0;
   color: #000000;
 }
 
-#corporate ul {
+#supportnewcomers ul {
   list-style-type: circle;
   font-size: 1em;
   line-height:1.6;
 }
 
-#corporate a {
+#supportnewcomers a {
   font-weight: 700;
   color: #F09416;
 }
 
-/* corporate tablet(ipad pro, ipad) --*/
+/* supportnewcomers tablet(ipad pro, ipad) --*/
  @media (max-width:1024px) and (min-width:768px) {
     #about .section-container {
       height: 650px;
@@ -1979,7 +1998,7 @@ CORPORATE SECTION
       width: 70%;
     }
 
-    #corporate .section-container {
+    #supportnewcomers .section-container {
       height: 1100px;
     }
 
@@ -1992,9 +2011,9 @@ CORPORATE SECTION
     }
 }
 
-/*--corporate mobile--*/
+/*--supportnewcomers mobile--*/
 @media only screen and (max-width:760px) {
-  #corporate .abt-visual-elements {
+  #supportnewcomers .abt-visual-elements {
     display: inline-block;
     position:relative;
     width: 100%;
@@ -2005,7 +2024,7 @@ CORPORATE SECTION
     left: 0;
   }
 
-  #corporate .abt-text {
+  #supportnewcomers .abt-text {
     display: inline-block;
     position: relative;
     width: 90%;
@@ -2014,11 +2033,11 @@ CORPORATE SECTION
     top:0;
   }
 
-  #corporate .section-container {
+  #supportnewcomers .section-container {
     height: auto;
   }
 
-  #corporate .pushsection {
+  #supportnewcomers .pushsection {
     top: -50px;
   }
 }
