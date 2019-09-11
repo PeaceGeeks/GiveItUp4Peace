@@ -540,6 +540,15 @@ li#high4 {
   border-radius: 8px;
 }
 
+#donate-btn-mobile {
+  border-radius: 8px;
+  font-size: 1em;
+  letter-spacing: 0;
+  background-color: #FFC12F;
+  padding: 10px;
+  margin-right: 10px;
+}
+
 /* mobile navigation
 --------------------------------------------------------------------- */
 @media only screen and (max-width:760px) {
@@ -912,7 +921,7 @@ LANDING SECTION
 
 li#top {
   display: block;
-  font-size: 1em;
+  font-size: 0.8em;
   list-style-type: none;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
@@ -920,11 +929,11 @@ li#top {
   color: #278186;
   text-align:center;
   line-height:1;
-  margin-top:1em;
+  margin-top:2em;
 }
 
 li#top span {
-  font-size: 5em;
+  font-size: 4em;
   color: #278186;
   line-height:1;
 }
@@ -932,7 +941,7 @@ li#top span {
 li#cd {
   display: inline-block;
   margin-right: auto;
-  font-size: 0.7em;
+  font-size: 0.6em;
   list-style-type: none;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
@@ -951,8 +960,8 @@ li#cd span {
 
 #landing h3 {
   margin-top: 0.5em;
-  margin-bottom: 1em;
-  line-height:1.5;
+  margin-bottom: 2.5em;
+  line-height:1.2;
   text-align:center;
   color: #278186;
   font-size: 1.2em;
@@ -1052,7 +1061,7 @@ li#cd span {
   font-family: "Poppins", sans-serif;
   font-size: 60px;
   color: white;
-  margin-top: 35%;
+  margin-top: 30%;
   margin-bottom: 10%;
   position: relative;
   max-width: 400px;
@@ -1067,10 +1076,10 @@ li#cd span {
 }
 
 p#raised {
-  font-size: 0.3em;
+  font-size: 0.28em;
   line-height: 1.4em;
   width: 100%;
-  margin-top: 7%;
+  margin-top: 10%;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
 }
@@ -1089,8 +1098,10 @@ p#raised span.smaller {
   font-weight: 700;
 }
 
-p#raised .campaign-match-blurb {
-  font-size: 18px;
+p#raised span.campaign-match-blurb {
+  font-size: 0.9em;
+  text-transform: none;
+  font-weight: 700;
 }
 
 #leaderboard {
@@ -1188,7 +1199,9 @@ h4#team-name:hover {
 
   #landing .landing-vid-container {
     width: 100%;
+
     min-height: 650px;
+
     top:0;
     left:0;
     background-color: #278186;
@@ -1260,6 +1273,10 @@ ROTATING TEXT SECTION
 #rotating .pushsection {
   background-color: #278186;
   top: 0px !important;
+}
+
+#rotating h1 {
+  color: #ffffff;
 }
 
 #rotating .sentence-container {
@@ -1339,7 +1356,6 @@ ROTATING TEXT SECTION
   transform: rotateX(0deg);
   transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-
 
 /* - - - - - - - - - - - - - - - - - - - - -
 GALLERY SECTION
@@ -1642,7 +1658,7 @@ PROJECTS SECTION
   line-height: 1.3em;
 }
 
-#projects .subtitle {
+.subtitle {
   text-align: center;
   margin-top: 1em;
   margin-bottom: 1em;
@@ -1650,6 +1666,10 @@ PROJECTS SECTION
   padding-left: 10%;
   padding-right: 10%;
   line-height: 1.4em;
+}
+
+.subtitle span {
+  color: #ffffff;
 }
 
 #projects h2 span {
@@ -1734,7 +1754,7 @@ a:focus {
     margin-top: 0em;
   }
 
-  #projects .subtitle {
+  .subtitle {
     text-align: center;
     margin-top: 1em;
     margin-bottom: 1em;
@@ -2042,6 +2062,7 @@ PARTICIPANT SECTION
 
 #participant .section-container {
   height:auto;
+  padding-top: 10em;
 }
 
 #instafeed ul { margin: 0; padding: 0; list-style: none;}
@@ -2522,4 +2543,52 @@ Image Modal
   #fund-goal-tier {
     max-width: 90%;
   }
+}
+
+/*Medium feed css*/
+
+#fm-medium-embed{
+  box-sizing: border-box;
+  margin: 0 auto 5em auto;
+  text-align: center;
+}
+
+.fm-post-wrapper{
+  display: inline-block;
+  border-radius: 3px;
+  width: 300px;
+  padding: 15px;
+  background: #fff;
+  text-align: left;
+  margin: 10px;
+  min-height: 340px;
+  border: 1px solid #ffffff;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.25);
+}
+
+.fm-post-title{
+  font-size: 20px;
+  height: 50px;
+  padding-right: 10px;
+}
+
+.fm-post-sub-title{
+  min-height: 100px;
+  line-height: 24px;
+}
+
+.fm-medium-profile{
+  margin-top: 10px;
+  padding: 5px;
+  display: block;
+}
+
+.fm-medium-profile a{
+  display: inline-block;
+  background: #fff;
+  padding: 15px;
+  border-radius: 3px;
+  border: 2px solid #f09416;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.15);
+  
 }

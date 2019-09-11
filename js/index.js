@@ -15,7 +15,6 @@ $( document ).ready(function() {
     "1249",
     "1251",
     "1259",
-    "1260",
     "1261",
     "1262",
     "1263",
@@ -28,18 +27,26 @@ $( document ).ready(function() {
   var teams = [];
   var totalRaised = 0;
   var totalRawRaised = 0;
-  var matchCap = 20000;
+  var matchCap = 25000;
   // Group ids (a subset)
   var affinityBridgeGID = 15630;
   var communityParticipantsGID = 14985;
   var peacegeeksGID = 14838;
   var blackFamilyGID = 15763;
+  var hiveGID = 14972;
+  var airbnbGID = 15640;
+  var friasGID = 15745;
+  var leftGID = 14971;
   // Groups that need their donations adjusted
   var groupIdsForDonationAdjustments = [
     affinityBridgeGID,
     communityParticipantsGID,
     peacegeeksGID,
     blackFamilyGID,
+    hiveGID,
+    airbnbGID,
+    friasGID,
+    leftGID,
   ];
   // Groups that shouldn't be public facing
   var groupIdBlacklist = [
@@ -66,13 +73,25 @@ $( document ).ready(function() {
             groupTotal = (chimpMoney * 2) + 1000;
           }
           if (groupId === communityParticipantsGID) {
-            groupTotal = ((chimpMoney - 15) * 2) + 3364;
+            groupTotal = ((chimpMoney - 15) * 2) + 3914 + 5850; // 5850 is the amount added from Black Family Foundation donation
           }
           if (groupId === peacegeeksGID) {
-            groupTotal = ((chimpMoney - 70) * 2) + 1000;
+            groupTotal = ((chimpMoney - 120) * 2) + 2900;
           }
           if (groupId === blackFamilyGID) {
-            groupTotal = (chimpMoney + 70) + 2620;
+            groupTotal = (chimpMoney * 2) + 5060;
+          }
+          if (groupId === hiveGID) {
+            groupTotal = (chimpMoney * 2) + 1560;
+          }
+          if (groupId === airbnbGID) {
+            groupTotal = (chimpMoney * 2) + 6500;
+          }
+          if (groupId === friasGID) {
+            groupTotal = (chimpMoney * 2) + 124;
+          }
+          if (groupId === leftGID) {
+            groupTotal = (chimpMoney * 2) + 504;
           }
         } else {
           groupTotal = chimpMoney * 2;
@@ -121,7 +140,6 @@ $( document ).ready(function() {
     }
   });
 });
-
 
 /* Client Logo Slider */
 
@@ -299,10 +317,11 @@ $(document).ready(function(){
      var containerElement = document.querySelector("#countdown");
      var endDate = "2019/10/31"
 
+
      var myCountDown = new ysCountDown(endDate, function (remaining, finished) {
 
        if (finished) {
-         containerElement.textContent = "Done!";
+         containerElement.textContent = "Campaign has ended";
        }
 
        daysElement.textContent = remaining.totalDays;
