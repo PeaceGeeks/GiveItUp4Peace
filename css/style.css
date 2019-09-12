@@ -792,7 +792,7 @@ LANDING SECTION
 #landing .landing-vid-container {
   width: 50%;
   height: 75%;
-  min-height:650px;
+  min-height:700px;
   position: relative;
   top: 65px;
   left:0;
@@ -1200,7 +1200,7 @@ h4#team-name:hover {
   #landing .landing-vid-container {
     width: 100%;
 
-    min-height: 650px;
+    min-height: 700px;
 
     top:0;
     left:0;
